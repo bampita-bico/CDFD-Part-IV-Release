@@ -1,0 +1,70 @@
+{
+  "finite_audit": {
+    "all_finite": true,
+    "non_finite_paths": []
+  },
+  "parameters": {
+    "nx": 8,
+    "ny": 8,
+    "steps": 8
+  },
+  "part": "Part B",
+  "provenance": {
+    "command": "partiv domain adapter sweep",
+    "language": "CDFL",
+    "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
+    "python": "3.14.4",
+    "runtime": "CDFD Runtime",
+    "timestamp_utc": "2026-05-26T12:21:15+00:00"
+  },
+  "rows": [
+    {
+      "domain": "energy_systems",
+      "errors": "",
+      "final_mean_C": 0.024900199733599797,
+      "final_mean_phi": 0.7544444444444445,
+      "final_mean_psi": 33.774951175778256,
+      "initial_mean_psi": 30.177777777777777,
+      "label": "energy systems",
+      "part": "Part B",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "networks",
+      "errors": "",
+      "final_mean_C": 0.020418163781551826,
+      "final_mean_phi": 0.7495,
+      "final_mean_psi": 41.85599737054252,
+      "initial_mean_psi": 36.5609756097561,
+      "label": "network routing",
+      "part": "Part B",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "cloud_computing",
+      "errors": "",
+      "final_mean_C": 0.10009880292907114,
+      "final_mean_phi": 0.7596,
+      "final_mean_psi": 7.770124545974156,
+      "initial_mean_psi": 7.558208955223882,
+      "label": "cloud capacity",
+      "part": "Part B",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "artificial_intelligence",
+      "errors": "",
+      "final_mean_C": 0.14940119840159874,
+      "final_mean_phi": 0.68,
+      "final_mean_psi": 4.601517502948771,
+      "initial_mean_psi": 4.533333333333332,
+      "label": "artificial intelligence",
+      "part": "Part B",
+      "regime": "overload",
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "finite_audit": {
+    "all_finite": true,
+    "non_finite_paths": []
+  },
+  "parameters": {
+    "nx": 8,
+    "ny": 8,
+    "steps": 8
+  },
+  "part": "Part D",
+  "provenance": {
+    "command": "partiv domain adapter sweep",
+    "language": "CDFL",
+    "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
+    "python": "3.14.4",
+    "runtime": "CDFD Runtime",
+    "timestamp_utc": "2026-05-26T12:21:15+00:00"
+  },
+  "rows": [
+    {
+      "domain": "consciousness",
+      "errors": "",
+      "final_mean_C": 0.009960079893439914,
+      "final_mean_phi": 0.5700000000000001,
+      "final_mean_psi": 69.84004885226828,
+      "initial_mean_psi": 57.00000000000001,
+      "label": "consciousness",
+      "part": "Part D",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "epidemiology",
+      "errors": "",
+      "final_mean_C": 0.6573652729670343,
+      "final_mean_phi": 0.875,
+      "final_mean_psi": 1.3279988219014252,
+      "initial_mean_psi": 1.325757575757576,
+      "label": "epidemiology",
+      "part": "Part D",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "geology",
+      "errors": "",
+      "final_mean_C": 0.6972055925407941,
+      "final_mean_phi": 0.2,
+      "final_mean_psi": 0.2842331821481348,
+      "initial_mean_psi": 0.28571428571428575,
+      "label": "geology",
+      "part": "Part D",
+      "regime": "constrained",
+      "status": "ok"
+    },
+    {
+      "domain": "quantum_mechanics",
+      "errors": "",
+      "final_mean_C": 0.2589620772294378,
+      "final_mean_phi": 0.45,
+      "final_mean_psi": 1.7333771531923452,
+      "initial_mean_psi": 1.7307692307692304,
+      "label": "quantum mechanics",
+      "part": "Part D",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "ecology",
+      "errors": "",
+      "final_mean_C": 0.05976047936063949,
+      "final_mean_phi": 0.75,
+      "final_mean_psi": 13.099731919706588,
+      "initial_mean_psi": 12.5,
+      "label": "ecology",
+      "part": "Part D",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "information_theory",
+      "errors": "",
+      "final_mean_C": 0.17430139813519852,
+      "final_mean_phi": 0.6499999999999999,
+      "final_mean_psi": 3.756665017841029,
+      "initial_mean_psi": 3.7142857142857144,
+      "label": "information flow",
+      "part": "Part D",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "immunology",
+      "errors": "",
+      "final_mean_C": 0.24900199733599784,
+      "final_mean_phi": 0.5,
+      "final_mean_psi": 2.006053053824441,
+      "initial_mean_psi": 2.0,
+      "label": "immune response",
+      "part": "Part D",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "genetics",
+      "errors": "",
+      "final_mean_C": 0.09960079893439919,
+      "final_mean_phi": 0.95,
+      "final_mean_psi": 9.855443403116608,
+      "initial_mean_psi": 9.499999999999998,
+      "label": "population genetics",
+      "part": "Part D",
+      "regime": "overload",
+      "status": "ok"
+    }
+  ]
+}

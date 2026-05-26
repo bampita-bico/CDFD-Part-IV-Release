@@ -1,0 +1,3 @@
+part,label,domain,status,regime,initial_mean_psi,final_mean_psi,final_mean_phi,final_mean_C,errors
+Part G,language evolution,linguistics,ok,overload,2.013636363636364,2.0191609483974204,0.443,0.2191217576556781,
+Part G,science paradigms,epistemology,ok,overload,2.888888888888889,2.9117025535364602,0.6499999999999999,0.2241017976023981,

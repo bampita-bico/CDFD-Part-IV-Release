@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\title{\textbf{Paper E-01: Universal AFL Synthesis:\\ A Constraint-Driven Flux Dynamics (CDFD) Perspective}}
+\author{Steve Bico Mujjabi, MD\\
+\small Independent Researcher\\
+\small ORCID: 0009-0001-0556-5516}
+\date{May 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This synthesis states the common Part IV modelling relation and the release
+boundary for cross-domain claims. Across Earth systems, engineered systems,
+socioeconomic systems, domain applications, cosmic and subatomic systems, and
+abstract or cognitive systems, CDFD/AFL uses the same candidate variables:
+driving flux $\Phi$, constraint $C$, responsiveness $S$, and structural memory
+$M_s$. Shared notation does not imply shared material mechanism or empirical
+validation. The release-local runtime outputs are internal diagnostics and
+tests that could break the mapping.
+\end{abstract}
+
+\paragraph{Greek-symbol convention.}
+Unless a manuscript states a tighter equation-local meaning, Greek symbols are
+local CDFD variables or coefficients, not universal constants. Here $\Phi$
+denotes driving flux, $\Psi_s$ denotes the adaptive operating ratio, and
+$\Lambda$ denotes the Life Number where used. The coefficients $\alpha$,
+$\beta$, and $\gamma$ denote accumulation or reinforcement, relaxation or decay,
+and diffusion, coupling, or redistribution.
+
+\section{Common Relation}
+
+Part IV uses the operating ratio
+\begin{equation}
+    \Psi_s^* = \left(\frac{\Phi}{C}\right) \cdot S \cdot M_s,
+\end{equation}
+with the reduced form $\Phi/C$ used only when $S=1$ and $M_s=1$. The companion
+constraint-update form is
+\begin{equation}
+    \frac{\partial C}{\partial t} = \alpha |\Phi| - \beta C + \gamma \nabla^2 C.
+\end{equation}
+
+These equations are a modelling grammar. A domain claim becomes stronger only
+when each term has a measurable proxy, a time scale, a spatial or network
+scale, and a failure condition.
+
+\section{Cross-Domain Reading}
+
+The Part IV sections use the same form for different reasons:
+\begin{itemize}
+    \item Part A asks how environmental systems carry heat, water, matter, and
+    biological throughput under constraint.
+    \item Part B asks how engineered systems balance throughput against
+    capacity, state, and responsiveness.
+    \item Part C asks how social and economic systems accumulate memory,
+    friction, and institutional constraint.
+    \item Part D tests additional domain mappings, from immunology and
+    population genetics to information flow.
+    \item Part F applies the notation to cosmic and subatomic examples as
+    hypothesis-level analogies.
+    \item Part G treats language, science, and AI as cognitive or abstract
+    transport systems.
+\end{itemize}
+
+\section{Measurement Layer}
+
+The first job in any domain is to choose proxies before drawing conclusions. $\Phi$ may be a rate of material, energy, information, capital, or signal flow. $C$ is the bottleneck that slows or redirects that flow. $S$ measures the system's ability to reconfigure under stress, and $M_s$ records the past load that still changes present behavior. A useful application gives those four terms observable definitions, a time scale, and a failure condition. If a standard domain model explains the same data more cleanly, the CDFD/AFL mapping should give way.
+
+\section{Current Runtime Diagnostic}
+
+The diagnostic script \texttt{Part\_E\_Synthesis/supplementary/run\_partiv\_discovery.py}
+produces a domain adapter sweep, a universal cascade stress test, two figures,
+and a generated Markdown summary. The run records finite-value behavior and
+overload/memory-locking dynamics in the current CDFD Runtime. It is a model
+record for later measurement, not a claim that the domains have already been
+validated.
+
+\section{Claim Standard}
+
+A Part IV claim is stronger when it names the measured $\Phi$, $C$, $S$, and
+$M_s$ proxies; states the expected direction of change; gives the time and
+network scale; identifies a dataset or experiment; and states what result would
+falsify the CDFD/AFL interpretation.
+
+\section{Boundary}
+
+The universal synthesis is not operational advice for infrastructure, finance,
+medicine, climate intervention, AI safety, or policy. It is a modelling archive
+with reproducible local diagnostics. Any applied use requires ordinary domain
+validation and expert review.
+
+\section{Conclusion}
+
+Part IV presents a single cross-domain modelling language. Its value depends on
+whether that language produces clearer measurable hypotheses than analogy alone.
+The release therefore keeps claim status, reproducibility, and falsification
+standards visible beside the manuscripts and outputs.
+
+\section*{Conflict of Interest}
+The author declares no conflict of interest.
+
+\section*{Data Availability}
+Release-local runtime diagnostics are available under each Part's \texttt{outputs/} folder, with release-wide synthesis artifacts under \texttt{Part\_E\_Synthesis/supplementary/}, \texttt{Part\_E\_Synthesis/outputs/}, and \texttt{Part\_E\_Synthesis/figures/}.
+
+\section{Reference Layer}
+\bibliographystyle{plain}
+\bibliography{universal_afl_references}
+\end{document}

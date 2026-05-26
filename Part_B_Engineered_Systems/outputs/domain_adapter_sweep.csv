@@ -1,0 +1,5 @@
+part,label,domain,status,regime,initial_mean_psi,final_mean_psi,final_mean_phi,final_mean_C,errors
+Part B,energy systems,energy_systems,ok,overload,30.177777777777777,33.774951175778256,0.7544444444444445,0.024900199733599797,
+Part B,network routing,networks,ok,overload,36.5609756097561,41.85599737054252,0.7495,0.020418163781551826,
+Part B,cloud capacity,cloud_computing,ok,overload,7.558208955223882,7.770124545974156,0.7596,0.10009880292907114,
+Part B,artificial intelligence,artificial_intelligence,ok,overload,4.533333333333332,4.601517502948771,0.68,0.14940119840159874,

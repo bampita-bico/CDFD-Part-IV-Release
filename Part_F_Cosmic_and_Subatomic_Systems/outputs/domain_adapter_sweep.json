@@ -1,0 +1,58 @@
+{
+  "finite_audit": {
+    "all_finite": true,
+    "non_finite_paths": []
+  },
+  "parameters": {
+    "nx": 8,
+    "ny": 8,
+    "steps": 8
+  },
+  "part": "Part F",
+  "provenance": {
+    "command": "partiv domain adapter sweep",
+    "language": "CDFL",
+    "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
+    "python": "3.14.4",
+    "runtime": "CDFD Runtime",
+    "timestamp_utc": "2026-05-26T12:21:15+00:00"
+  },
+  "rows": [
+    {
+      "domain": "astrophysics",
+      "errors": "",
+      "final_mean_C": 0.1958815712376516,
+      "final_mean_phi": 0.205,
+      "final_mean_psi": 1.0392904931118707,
+      "initial_mean_psi": 1.0423728813559323,
+      "label": "astrophysics",
+      "part": "Part F",
+      "regime": "stable",
+      "status": "ok"
+    },
+    {
+      "domain": "nuclear_physics",
+      "errors": "",
+      "final_mean_C": 0.2988023968031974,
+      "final_mean_phi": 0.6200000000000001,
+      "final_mean_psi": 2.0750514803261253,
+      "initial_mean_psi": 2.066666666666667,
+      "label": "nuclear dynamics",
+      "part": "Part F",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "plasma_physics",
+      "errors": "",
+      "final_mean_C": 0.34860279627039703,
+      "final_mean_phi": 0.33999999999999997,
+      "final_mean_psi": 0.9688372735041967,
+      "initial_mean_psi": 0.9714285714285714,
+      "label": "plasma dynamics",
+      "part": "Part F",
+      "regime": "stable",
+      "status": "ok"
+    }
+  ]
+}

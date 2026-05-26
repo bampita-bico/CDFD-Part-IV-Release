@@ -1,0 +1,9 @@
+part,label,domain,status,regime,initial_mean_psi,final_mean_psi,final_mean_phi,final_mean_C,errors
+Part D,consciousness,consciousness,ok,overload,57.00000000000001,69.84004885226828,0.5700000000000001,0.009960079893439914,
+Part D,epidemiology,epidemiology,ok,overload,1.325757575757576,1.3279988219014252,0.875,0.6573652729670343,
+Part D,geology,geology,ok,constrained,0.28571428571428575,0.2842331821481348,0.2,0.6972055925407941,
+Part D,quantum mechanics,quantum_mechanics,ok,overload,1.7307692307692304,1.7333771531923452,0.45,0.2589620772294378,
+Part D,ecology,ecology,ok,overload,12.5,13.099731919706588,0.75,0.05976047936063949,
+Part D,information flow,information_theory,ok,overload,3.7142857142857144,3.756665017841029,0.6499999999999999,0.17430139813519852,
+Part D,immune response,immunology,ok,overload,2.0,2.006053053824441,0.5,0.24900199733599784,
+Part D,population genetics,genetics,ok,overload,9.499999999999998,9.855443403116608,0.95,0.09960079893439919,

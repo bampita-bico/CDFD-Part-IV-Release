@@ -1,0 +1,46 @@
+{
+  "finite_audit": {
+    "all_finite": true,
+    "non_finite_paths": []
+  },
+  "parameters": {
+    "nx": 8,
+    "ny": 8,
+    "steps": 8
+  },
+  "part": "Part G",
+  "provenance": {
+    "command": "partiv domain adapter sweep",
+    "language": "CDFL",
+    "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
+    "python": "3.14.4",
+    "runtime": "CDFD Runtime",
+    "timestamp_utc": "2026-05-26T12:21:15+00:00"
+  },
+  "rows": [
+    {
+      "domain": "linguistics",
+      "errors": "",
+      "final_mean_C": 0.2191217576556781,
+      "final_mean_phi": 0.443,
+      "final_mean_psi": 2.0191609483974204,
+      "initial_mean_psi": 2.013636363636364,
+      "label": "language evolution",
+      "part": "Part G",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "epistemology",
+      "errors": "",
+      "final_mean_C": 0.2241017976023981,
+      "final_mean_phi": 0.6499999999999999,
+      "final_mean_psi": 2.9117025535364602,
+      "initial_mean_psi": 2.888888888888889,
+      "label": "science paradigms",
+      "part": "Part G",
+      "regime": "overload",
+      "status": "ok"
+    }
+  ]
+}

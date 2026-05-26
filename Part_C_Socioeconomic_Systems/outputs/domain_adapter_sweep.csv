@@ -1,0 +1,6 @@
+part,label,domain,status,regime,initial_mean_psi,final_mean_psi,final_mean_phi,final_mean_C,errors
+Part C,macroeconomic flow,economics,ok,stable,1.0,1.00002681818693,1.0,0.9960079893439914,
+Part C,trade corridors,trade_routes,ok,overload,2.75,2.768245926743357,0.55,0.19920159786879837,
+Part C,migration pressure,migration,ok,constrained,0.5777777777777778,0.5756362986993145,0.26,0.4482035952047962,
+Part C,education throughput,education,ok,overload,2.933333333333334,2.961574422190224,0.8800000000000001,0.2988023968031974,
+Part C,governance pressure,politics,ok,overload,1.4999999999999998,1.5018376581518456,0.6,0.39840319573759675,

@@ -1,0 +1,82 @@
+{
+  "finite_audit": {
+    "all_finite": true,
+    "non_finite_paths": []
+  },
+  "parameters": {
+    "nx": 8,
+    "ny": 8,
+    "steps": 8
+  },
+  "part": "Part C",
+  "provenance": {
+    "command": "partiv domain adapter sweep",
+    "language": "CDFL",
+    "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
+    "python": "3.14.4",
+    "runtime": "CDFD Runtime",
+    "timestamp_utc": "2026-05-26T12:21:15+00:00"
+  },
+  "rows": [
+    {
+      "domain": "economics",
+      "errors": "",
+      "final_mean_C": 0.9960079893439914,
+      "final_mean_phi": 1.0,
+      "final_mean_psi": 1.00002681818693,
+      "initial_mean_psi": 1.0,
+      "label": "macroeconomic flow",
+      "part": "Part C",
+      "regime": "stable",
+      "status": "ok"
+    },
+    {
+      "domain": "trade_routes",
+      "errors": "",
+      "final_mean_C": 0.19920159786879837,
+      "final_mean_phi": 0.55,
+      "final_mean_psi": 2.768245926743357,
+      "initial_mean_psi": 2.75,
+      "label": "trade corridors",
+      "part": "Part C",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "migration",
+      "errors": "",
+      "final_mean_C": 0.4482035952047962,
+      "final_mean_phi": 0.26,
+      "final_mean_psi": 0.5756362986993145,
+      "initial_mean_psi": 0.5777777777777778,
+      "label": "migration pressure",
+      "part": "Part C",
+      "regime": "constrained",
+      "status": "ok"
+    },
+    {
+      "domain": "education",
+      "errors": "",
+      "final_mean_C": 0.2988023968031974,
+      "final_mean_phi": 0.8800000000000001,
+      "final_mean_psi": 2.961574422190224,
+      "initial_mean_psi": 2.933333333333334,
+      "label": "education throughput",
+      "part": "Part C",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "politics",
+      "errors": "",
+      "final_mean_C": 0.39840319573759675,
+      "final_mean_phi": 0.6,
+      "final_mean_psi": 1.5018376581518456,
+      "initial_mean_psi": 1.4999999999999998,
+      "label": "governance pressure",
+      "part": "Part C",
+      "regime": "overload",
+      "status": "ok"
+    }
+  ]
+}

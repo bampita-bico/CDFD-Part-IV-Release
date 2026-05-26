@@ -1,0 +1,85 @@
+cff-version: 1.2.0
+message: "If you use this archive, cite this Part IV release and also cite the CDFD Runtime DOI when using runtime-linked CDFL diagnostics."
+title: "CDFD Part IV: Universal Adaptive Flux Limitation - Constraint-Driven Flux Dynamics"
+version: "1.0.0"
+authors:
+  - family-names: Mujjabi
+    given-names: Steve Bico
+    name-suffix: MD
+    affiliation: Independent Researcher
+    orcid: "https://orcid.org/0009-0001-0556-5516"
+date-released: "2026-05-25"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/bampita-bico/CDFD-Part-IV-Release"
+abstract: "Public Part IV archive for Constraint-Driven Flux Dynamics, including 58 manuscripts across Earth systems, engineered systems, socioeconomic systems, domain applications, cosmic and subatomic systems, and abstract or cognitive systems. The archive uses Adaptive Flux Limitation as a cross-domain modelling language while keeping runtime diagnostics separate from field evidence."
+keywords:
+  - CDFD
+  - CDFL
+  - CDFD Runtime
+  - Adaptive Flux Limitation
+  - AFL
+  - universal systems science
+  - systems science
+  - complex systems
+  - network science
+  - Earth systems
+  - climate dynamics
+  - oceanography
+  - hydrology
+  - ecology
+  - biodiversity
+  - infrastructure
+  - electrical grids
+  - internet routing
+  - distributed computing
+  - cloud computing
+  - artificial intelligence
+  - socioeconomic systems
+  - economics
+  - financial systems
+  - governance
+  - epidemiology
+  - immunology
+  - population genetics
+  - cosmic systems
+  - stellar evolution
+  - plasma dynamics
+  - language evolution
+  - science paradigms
+  - reproducible research
+  - open science
+  - preprint
+references:
+  - type: software
+    title: "CDFD Runtime: Constraint-Driven Flux Dynamics and CDFL Execution Engine"
+    authors:
+      - family-names: Mujjabi
+        given-names: Steve Bico
+        orcid: "https://orcid.org/0009-0001-0556-5516"
+    doi: "10.5281/zenodo.20343160"
+    date-released: "2026-05-22"
+    version: "1.0.1"
+  - type: generic
+    title: "CDFD Part I: Fundamental Physics - Constraint-Driven Field Theory and Flux Dynamics"
+    authors:
+      - family-names: Mujjabi
+        given-names: Steve Bico
+        orcid: "https://orcid.org/0009-0001-0556-5516"
+    doi: "10.5281/zenodo.20250821"
+    date-released: "2026-05-17"
+  - type: generic
+    title: "CDFD Part II: Origins of Life and Tri-Regime Bioenergetics - Constraint-Driven Flux Dynamics"
+    authors:
+      - family-names: Mujjabi
+        given-names: Steve Bico
+        orcid: "https://orcid.org/0009-0001-0556-5516"
+    doi: "10.5281/zenodo.20264779"
+    date-released: "2026-05-20"
+  - type: generic
+    title: "CDFD Part III: Adaptive Flux Limitation Biology and Medicine - Constraint-Driven Flux Dynamics"
+    authors:
+      - family-names: Mujjabi
+        given-names: Steve Bico
+        orcid: "https://orcid.org/0009-0001-0556-5516"
+    doi: "10.5281/zenodo.20344695"
+    date-released: "2026-05-22"

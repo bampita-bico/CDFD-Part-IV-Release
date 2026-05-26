@@ -1,0 +1,6 @@
+part,label,domain,status,regime,initial_mean_psi,final_mean_psi,final_mean_phi,final_mean_C,errors
+Part A,climate and atmosphere,climate,ok,overload,1.2102564102564102,1.2098141699885259,0.59,0.48555389480519584,
+Part A,ocean transport,oceanography,ok,overload,2.1666666666666665,2.172492511963382,0.325,0.14940119840159874,
+Part A,hydrological flow,hydrology,ok,overload,2.75,2.768245926743357,0.55,0.19920159786879837,
+Part A,biodiversity network,biodiversity,ok,overload,3.799999999999998,3.8425886637269646,0.57,0.14940119840159874,
+Part A,pollution constraint,pollution,ok,overload,2.56,2.5763758962957315,0.64,0.24900199733599784,

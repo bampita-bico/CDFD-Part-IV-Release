@@ -1,0 +1,82 @@
+{
+  "finite_audit": {
+    "all_finite": true,
+    "non_finite_paths": []
+  },
+  "parameters": {
+    "nx": 8,
+    "ny": 8,
+    "steps": 8
+  },
+  "part": "Part A",
+  "provenance": {
+    "command": "partiv domain adapter sweep",
+    "language": "CDFL",
+    "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
+    "python": "3.14.4",
+    "runtime": "CDFD Runtime",
+    "timestamp_utc": "2026-05-26T12:21:15+00:00"
+  },
+  "rows": [
+    {
+      "domain": "climate",
+      "errors": "",
+      "final_mean_C": 0.48555389480519584,
+      "final_mean_phi": 0.59,
+      "final_mean_psi": 1.2098141699885259,
+      "initial_mean_psi": 1.2102564102564102,
+      "label": "climate and atmosphere",
+      "part": "Part A",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "oceanography",
+      "errors": "",
+      "final_mean_C": 0.14940119840159874,
+      "final_mean_phi": 0.325,
+      "final_mean_psi": 2.172492511963382,
+      "initial_mean_psi": 2.1666666666666665,
+      "label": "ocean transport",
+      "part": "Part A",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "hydrology",
+      "errors": "",
+      "final_mean_C": 0.19920159786879837,
+      "final_mean_phi": 0.55,
+      "final_mean_psi": 2.768245926743357,
+      "initial_mean_psi": 2.75,
+      "label": "hydrological flow",
+      "part": "Part A",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "biodiversity",
+      "errors": "",
+      "final_mean_C": 0.14940119840159874,
+      "final_mean_phi": 0.57,
+      "final_mean_psi": 3.8425886637269646,
+      "initial_mean_psi": 3.799999999999998,
+      "label": "biodiversity network",
+      "part": "Part A",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "domain": "pollution",
+      "errors": "",
+      "final_mean_C": 0.24900199733599784,
+      "final_mean_phi": 0.64,
+      "final_mean_psi": 2.5763758962957315,
+      "initial_mean_psi": 2.56,
+      "label": "pollution constraint",
+      "part": "Part A",
+      "regime": "overload",
+      "status": "ok"
+    }
+  ]
+}
