@@ -34,6 +34,107 @@
 \begin{document}
 \maketitle
 
+\begin{abstract}
+This paper treats AI neural computation as a CDFD/AFL domain-application
+hypothesis. Token flow, activation flow, gradient updates, memory retrieval,
+tool calls, and inference demand are read as candidate fluxes $\Phi$ moving
+through constraints $C$ such as context length, compute budget, memory bandwidth,
+latency, alignment filters, and training-data structure. The goal is to define
+measurable overload and recovery variables, not to claim that an AI system has
+life, intention, or consciousness.
+\end{abstract}
+
+\section{Series Context}
+
+Part I sets the flow--constraint language used here \cite{MujjabiPartI2026}.
+Part II develops the Life Number and the origins-of-life use of the same notation
+\cite{MujjabiPartII2026}. Part III applies AFL to biology and medicine
+\cite{MujjabiPartIII2026}. This paper uses those references for notation and
+series continuity; it does not transfer biological claims onto AI systems.
+
+\paragraph{Notation.}
+In this paper, $C$ names the active AI-system constraint or capacity burden.
+$\Phi$ is the information or compute flow, $S$ is adaptive response, and $M_s$
+is retained structural memory. $\Lambda$ is named only as the Part II Life
+Number \cite{MujjabiPartII2026}. It is not used here as a machine-life variable.
+
+\section{AI Computation as Constrained Flow}
+
+Modern AI systems move information through layered constraints. A prompt pushes
+tokens into a context window; attention routes signals through a trained
+parameter field; retrieval systems add external memory; inference hardware sets
+latency, bandwidth, and energy limits; safety filters and tool policies add
+additional routing constraints. CDFD/AFL reads the system as a flow problem with
+memory: outputs depend on current demand and on structure laid down during
+training, fine-tuning, caching, and retrieval.
+
+\section{Candidate Variable Map}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+CDFD term & AI-system reading & Example proxy \\
+\midrule
+$\Phi$ & inference or update flow & token rate, request load, gradient norm \\
+$C$ & active constraint & context length, memory bandwidth, latency, policy filter \\
+$S$ & responsiveness & routing change, retrieval update, tool selection, scaling \\
+$M_s$ & structural memory & weights, embeddings, cache, retrieval corpus, history \\
+$\Psi_s$ & operating ratio & stable, saturated, brittle, or overloaded regime \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Failure Modes}
+
+AI overload does not need mystical language. It can mean context saturation,
+retrieval conflict, latency collapse, hallucination under sparse grounding,
+memory contamination, brittle tool routing, or training-inference mismatch.
+Those states are measurable only when the system boundary is clear. A local
+model, a hosted model, an agent loop, and a retrieval-augmented system have
+different $\Phi$, $C$, $S$, and $M_s$ proxies.
+
+\section{Measurement Layer}
+
+Useful measurements include token throughput, context occupancy, retrieval hit
+rate, cache age, latency, refusal/error rate, grounding score, tool-call
+success, memory bandwidth, gradient stability, and energy cost. A CDFD/AFL
+analysis must name the failure condition before interpreting $\Psi_s$. Without
+that condition, the notation only renames ordinary engineering metrics.
+
+\section{Current Runtime Diagnostic}
+
+The Part B adapter sweep includes an artificial-intelligence row, and the Part
+E cascade diagnostic checks finite behavior and memory locking in the current
+CDFD Runtime \cite{CDFDRuntime2026}. These outputs are release evidence for the
+runtime, not evidence that any deployed AI system has been validated by this
+paper.
+
+\section{Tests That Can Break the Mapping}
+
+The AI mapping weakens if the proposed variables cannot predict saturation,
+latency, grounding failure, or recovery better than existing system metrics; if
+$M_s$ cannot be separated from ordinary model state; or if the analysis depends
+on anthropomorphic language instead of measurable system behavior.
+
+\section{Conclusion}
+
+AI neural computation is a strong stress test for Part IV because it has visible
+flow, constraint, responsiveness, and memory. The claim stays modest: CDFD/AFL
+may help audit overload and recovery in AI systems when the variables are
+measured plainly.
+
+\section*{Conflict of Interest}
+The author declares no conflict of interest.
+
+\section*{Data Availability}
+Release-local runtime diagnostics are available under each Part's
+\texttt{outputs/} folder, with release-wide synthesis artifacts under
+\texttt{Part\_E\_Synthesis/supplementary/},
+\texttt{Part\_E\_Synthesis/outputs/}, and
+\texttt{Part\_E\_Synthesis/figures/}.
+
+\section{Reference Layer}
 
 \bibliographystyle{plain}
 \bibliography{universal_afl_references}

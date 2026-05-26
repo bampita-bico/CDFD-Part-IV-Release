@@ -34,6 +34,109 @@
 \begin{document}
 \maketitle
 
+\begin{abstract}
+This paper treats neural computation as an engineered and biological transport
+analogy for CDFD/AFL. Spikes, synaptic current, activation flow, gradients, and
+attention-like routing are read as candidate fluxes $\Phi$ moving through
+constraints $C$ such as bandwidth, inhibition, metabolic cost, finite precision,
+and connectivity. The paper does not claim that biological brains and artificial
+networks are the same material system. It asks which measurable bottlenecks and
+memory terms make neural computation auditable.
+\end{abstract}
+
+\section{Series Context}
+
+Part I sets the flow--constraint language used here \cite{MujjabiPartI2026}.
+Part II develops the Life Number and the origins-of-life use of the same notation
+\cite{MujjabiPartII2026}. Part III applies AFL to biology and medicine
+\cite{MujjabiPartIII2026}. This paper sits in Part B because it focuses on the
+engineered-computation reading of neural systems.
+
+\paragraph{Notation.}
+In this paper, $C$ names the active computational constraint or capacity burden.
+$\Phi$ is the signal or update flow, $S$ is adaptive response, and $M_s$ is
+retained structural memory. $\Lambda$ is used here only when referencing the
+Part II Life Number \cite{MujjabiPartII2026}; it is not used as a claim about
+consciousness or machine life.
+
+\section{Neural Computation as Transport}
+
+Neural computation moves signals through constrained pathways. In biological
+tissue, those constraints include synaptic strength, inhibition, refractory
+periods, metabolic cost, and network topology. In artificial neural networks,
+they include parameter count, activation bandwidth, context length, memory
+traffic, precision, optimization state, and hardware limits. CDFD/AFL gives a
+single audit question for both settings: where does flow concentrate, what
+limits it, how does the system adapt, and what past load remains in the
+structure?
+
+\section{Candidate Variable Map}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+CDFD term & Neural-computation reading & Example proxy \\
+\midrule
+$\Phi$ & signal, activation, or gradient flow & spike rate, activation norm, token updates \\
+$C$ & active constraint & inhibition, bandwidth, precision, memory traffic \\
+$S$ & responsiveness & plasticity, gating, normalization, routing adjustment \\
+$M_s$ & structural memory & synaptic weights, trained parameters, cached state \\
+$\Psi_s$ & operating ratio & balanced, saturated, unstable, or underused regime \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Biological and Engineered Boundaries}
+
+Part III gives the biological and medical context for AFL \cite{MujjabiPartIII2026}.
+This paper uses that context carefully. A biological neuron, a neuromorphic
+device, and a transformer layer can all be described as constrained signal
+systems, but the measurements differ. A useful comparison must state the unit
+of flow, the time scale, the constraint, and the failure mode before drawing
+any cross-domain conclusion.
+
+\section{Measurement Layer}
+
+For biological data, measurable proxies may include firing rate, synaptic
+current, local field power, metabolic demand, refractory recovery, and plastic
+change. For artificial systems, proxies may include activation magnitude,
+gradient norm, attention entropy, memory bandwidth, context pressure, and
+inference latency. CDFD/AFL adds value only if these proxies improve the audit
+of saturation, collapse, recovery, or adaptation.
+
+\section{Current Runtime Diagnostic}
+
+The Part B adapter sweep includes artificial-intelligence and computation rows,
+and the Part E cascade test records finite runtime behavior in the current CDFD
+Runtime \cite{CDFDRuntime2026}. These files document model behavior. They do
+not validate a neuroscience claim or certify an AI-system claim.
+
+\section{Tests That Can Break the Mapping}
+
+The mapping weakens if measured bottlenecks do not track saturation or recovery,
+if ordinary neural-network or neuroscience metrics explain the behavior more
+cleanly, or if the proposed variables cannot be measured without circular
+definitions.
+
+\section{Conclusion}
+
+Neural computation is a useful Part B case because it sits between biological
+signal processing and engineered computation. The CDFD/AFL frame is strongest
+when it identifies real bottlenecks and memory terms rather than replacing
+existing domain models.
+
+\section*{Conflict of Interest}
+The author declares no conflict of interest.
+
+\section*{Data Availability}
+Release-local runtime diagnostics are available under each Part's
+\texttt{outputs/} folder, with release-wide synthesis artifacts under
+\texttt{Part\_E\_Synthesis/supplementary/},
+\texttt{Part\_E\_Synthesis/outputs/}, and
+\texttt{Part\_E\_Synthesis/figures/}.
+
+\section{Reference Layer}
 
 \bibliographystyle{plain}
 \bibliography{universal_afl_references}

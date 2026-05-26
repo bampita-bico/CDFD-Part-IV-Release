@@ -1,14 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this archive, cite this Part IV release and also cite the CDFD Runtime DOI when using runtime-linked CDFL diagnostics."
 title: "CDFD Part IV: Universal Adaptive Flux Limitation - Constraint-Driven Flux Dynamics"
-version: "1.0.0"
+version: "1.0.1"
 authors:
   - family-names: Mujjabi
     given-names: Steve Bico
     name-suffix: MD
     affiliation: Independent Researcher
     orcid: "https://orcid.org/0009-0001-0556-5516"
-date-released: "2026-05-25"
+date-released: "2026-05-26"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/bampita-bico/CDFD-Part-IV-Release"
 abstract: "Public Part IV archive for Constraint-Driven Flux Dynamics, including 58 manuscripts across Earth systems, engineered systems, socioeconomic systems, domain applications, cosmic and subatomic systems, and abstract or cognitive systems. The archive uses Adaptive Flux Limitation as a cross-domain modelling language while keeping runtime diagnostics separate from field evidence."

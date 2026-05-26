@@ -34,6 +34,104 @@
 \begin{document}
 \maketitle
 
+\begin{abstract}
+This paper treats ocean currents as a CDFD/AFL modelling hypothesis. Wind
+stress, buoyancy forcing, heat, salt, and mass transport are read as fluxes
+$\Phi$ moving through basin geometry, stratification, bathymetry, mixing limits,
+and freshwater constraints $C$. The claim is not that CDFD/AFL replaces
+physical oceanography. The claim is that the notation can organise measurable
+questions about transport, bottlenecks, responsiveness, and long memory in the
+ocean system.
+\end{abstract}
+
+\section{Series Context}
+
+Part I sets the flow--constraint language used here \cite{MujjabiPartI2026}.
+Part II develops the Life Number and the origins-of-life use of the same notation
+\cite{MujjabiPartII2026}. Part III applies AFL to biology and medicine
+\cite{MujjabiPartIII2026}. Part IV uses the language as a cross-domain stress
+test, with measurement kept separate from analogy.
+
+\paragraph{Notation.}
+In this paper, $C$ names the active ocean constraint or capacity burden.
+$\Phi$ is the driving transport, $S$ is the ocean response, and $M_s$ is retained
+structural memory. $\Lambda$ is mentioned only where the Part II Life Number is
+being referenced \cite{MujjabiPartII2026}.
+
+\section{Ocean Transport Frame}
+
+The ocean stores and redistributes heat, salt, carbon, nutrients, and momentum.
+Its flow is constrained by basin walls, seafloor geometry, density structure,
+wind forcing, sea ice, freshwater input, and mixing depth. In the CDFD/AFL
+reading, a current system is not only a velocity field; it is a flow path with
+capacity, inertia, adaptive response, and memory.
+
+\section{Candidate Variable Map}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+CDFD term & Ocean-current reading & Example proxy \\
+\midrule
+$\Phi$ & ocean transport or forcing & Sverdrup transport, heat flux, freshwater flux \\
+$C$ & active constraint & stratification, bathymetry, sill depth, friction \\
+$S$ & responsiveness & mixing, eddy compensation, current-path adjustment \\
+$M_s$ & structural memory & heat storage, salinity anomaly, overturning inertia \\
+$\Psi_s$ & operating ratio & balanced, constrained, stalled, or amplified transport \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Memory and Circulation Change}
+
+Ocean memory is central to the mapping. Heat stored below the mixed layer,
+persistent salinity anomalies, ice-ocean feedback, and overturning inertia can
+make present circulation depend on prior forcing. In CDFD/AFL terms, high
+$M_s$ means the current state carries a record of earlier flux and constraint.
+That does not by itself prove a new mechanism; it gives a way to state what
+must be measured.
+
+\section{Measurement Layer}
+
+A useful ocean application specifies the current system, the forcing window,
+the proxy for $\Phi$, the constraint term $C$, the response term $S$, and the
+memory term $M_s$. Candidate failure conditions include persistent transport
+weakening, blocked heat redistribution, salinity-driven stratification, or a
+shift in overturning regime. The mapping has value only if it improves
+measurement or interpretation beyond ordinary oceanographic diagnostics.
+
+\section{Current Runtime Diagnostic}
+
+The Part E diagnostic run includes an ocean-transport adapter row and the
+universal cascade stress test. These outputs check finite runtime behavior in
+the current CDFD Runtime \cite{CDFDRuntime2026}. They do not validate any ocean
+claim; they record model behavior that later data work can test.
+
+\section{Tests That Can Break the Mapping}
+
+The ocean-current mapping weakens if the chosen proxies for flux, constraint,
+responsiveness, and memory do not track observed transport changes; if a
+standard ocean model explains the same behavior more cleanly; or if the CDFD
+terms cannot be tied to reproducible ocean data.
+
+\section{Conclusion}
+
+Ocean currents are a natural test case for flow, constraint, response, and
+memory. CDFD/AFL is useful here only as a disciplined measurement language. The
+release-level claim remains limited to that role.
+
+\section*{Conflict of Interest}
+The author declares no conflict of interest.
+
+\section*{Data Availability}
+Release-local runtime diagnostics are available under each Part's
+\texttt{outputs/} folder, with release-wide synthesis artifacts under
+\texttt{Part\_E\_Synthesis/supplementary/},
+\texttt{Part\_E\_Synthesis/outputs/}, and
+\texttt{Part\_E\_Synthesis/figures/}.
+
+\section{Reference Layer}
 
 \bibliographystyle{plain}
 \bibliography{universal_afl_references}
