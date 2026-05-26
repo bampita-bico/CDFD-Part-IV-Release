@@ -12,7 +12,6 @@
 `climate-dynamics`
 `ecology`
 `infrastructure`
-`electrical-grids`
 `artificial-intelligence`
 `socioeconomic-systems`
 `governance`
@@ -20,5 +19,4 @@
 `immunology`
 `cosmic-systems`
 `plasma-dynamics`
-`language-evolution`
 `reproducible-research`

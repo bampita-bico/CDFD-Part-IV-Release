@@ -68,7 +68,7 @@ def main() -> int:
 </head>
 <body>
   <h1>CDFD Part IV Runtime Panels</h1>
-  <p>Generated outputs are candidate simulation diagnostics and falsification targets, not empirical proof.</p>
+  <p>These files are model outputs from the release diagnostics. They document runtime behavior and point to measurements that can test the mapping.</p>
   <h2>Universal Network Cascade</h2>
   <p>Final hub <code>Psi_s</code>: {final.get('hub_psi_s', 'not generated')} |
      overloaded nodes: {final.get('overloaded_nodes', 'not generated')} |

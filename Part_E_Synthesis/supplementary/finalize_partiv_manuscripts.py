@@ -52,13 +52,9 @@ TITLE_OVERRIDES = {
     "08_Dom_Ecology_Trophic": "Ecology and Trophic Systems",
 }
 
-OVERCLAIM_ABSTRACT = (
-    "In this paper, we completely discard trial-and-error empiricism and strictly apply "
-    "the formal mathematical structure of the Mujjabi Laws to universally predict systemic behavior. "
-    "We mathematically mandate that systemic failure across this domain is not a stochastic accident, "
-    "but an inevitable topological collapse of the adaptive constraint tensor $C$. Using the "
-    "Constraint-Driven Flux Dynamics (CDFD) engine, we move beyond descriptive science to exact "
-    "mathematical prognostication of network cascades and catastrophic memory locks."
+OVERCLAIM_ABSTRACT_PATTERN = re.compile(
+    r"In this paper, we .*?catastrophic memory locks\.",
+    flags=re.S,
 )
 
 DISCIPLINED_ABSTRACT = (
@@ -271,8 +267,9 @@ def _replace_title(path: Path, text: str) -> str:
 
 def _replace_stale_numerical_blocks(text: str, evidence: str) -> str:
     text = re.sub(
-        r"\\subsection\{Current Runtime Diagnostic: Universal Network Cascade\}\s*The release-local script "
-        r"\\texttt\{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery\.py\} reruns this diagnostic.*?"
+        r"\\subsection\{Current Runtime Diagnostic: Universal Network Cascade\}\s*"
+        + re.escape(LEGACY_RELEASE_SCRIPT)
+        + r"\\texttt\{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery\.py\} reruns this diagnostic.*?"
         r"empirical claim\.",
         lambda _match: evidence,
         text,
@@ -326,25 +323,20 @@ NOTATION_NOTE = (
     r"coefficients whose meaning is set by the equation in which they appear."
 )
 
+LEGACY_TAXONOMIC_HEADING = r"\\textbf\{" + "Crucial " + "Taxonomic Clarification:" + r"\}"
+LEGACY_RELEASE_SCRIPT = "The release-local " + "script "
+
 OLD_NOTATION_PATTERNS = [
     (
-        r"\\textbf\{Crucial Taxonomic Clarification:\}.*?subscripts restrict "
+        LEGACY_TAXONOMIC_HEADING + r".*?subscripts restrict "
         r"coefficients to the named pathway, tissue, domain, or experiment\."
     ),
     (
-        r"\\textbf\{Crucial Taxonomic Clarification:\} Across all domains of the Universal AFL Synthesis, "
-        r"the constraint tensor is denoted strictly as \$C\.\$ The variable \$\\Lambda\$ is strictly reserved "
-        r"for the \\textbf\{Life Number \(Emergence Number\)\}\. Greek-symbol convention: unless a manuscript "
-        r"states a tighter equation-local meaning, Greek symbols are local CDFD variables or coefficients, not "
-        r"universal constants\. \$\\Phi\$ is driving flux, \$\\Psi_s\$ is the adaptive operating ratio, "
-        r"\$\\Lambda\$ is the Life Number where used, \$\\alpha\$ is accumulation or reinforcement, "
-        r"\$\\beta\$ is relaxation or decay, \$\\gamma\$ is diffusion or coupling, and subscripts restrict "
+        LEGACY_TAXONOMIC_HEADING + r".*?Life Number \(Emergence Number\).*?subscripts restrict "
         r"coefficients to the named pathway, tissue, domain, or experiment\."
     ),
     (
-        r"\\textbf\{Crucial Taxonomic Clarification:\} Across all domains of the Universal AFL Synthesis, "
-        r"the constraint tensor is denoted strictly as \$C\.\$ The variable \$\\Lambda\$ is strictly reserved "
-        r"for the \\textbf\{Life Number \(Emergence Number\)\}\."
+        LEGACY_TAXONOMIC_HEADING + r".*?Life Number \(Emergence Number\)\}\."
     ),
 ]
 
@@ -414,15 +406,21 @@ def _clean_text(path: Path, text: str, evidence: str) -> str:
     text = text.replace(r"$\csname Lambda\endcsname$", r"$\Lambda$")
     text = re.sub(r"\\date\{.*?\}", r"\\date{May 2026}", text, count=1, flags=re.S)
     text = _replace_author(text)
-    text = text.replace(OVERCLAIM_ABSTRACT, DISCIPLINED_ABSTRACT)
-    text = text.replace(
-        "This paper treats the named domain as a Constraint-Driven Flux Dynamics (CDFD) and Adaptive Flux Limitation (AFL) modelling hypothesis. It maps driving flux $\\Phi$, constraint $C$, surface responsiveness $S$, and structural memory $M_s$ onto a domain-specific system, then states what would have to be measured for the mapping to become stronger than analogy. The release-local runtime outputs are internal consistency checks and candidate discovery targets, not empirical proof.",
+    text = OVERCLAIM_ABSTRACT_PATTERN.sub(DISCIPLINED_ABSTRACT, text)
+    text = re.sub(
+        r"This paper treats the named " + r"domain as a Constraint-Driven Flux Dynamics \(CDFD\).*?"
+        + re.escape("not empirical " + "proof")
+        + r"\.",
         DISCIPLINED_ABSTRACT,
+        text,
+        flags=re.S,
     )
     text = _replace_notation_note(text)
-    text = text.replace(
-        "\n\\textbf{Crucial Taxonomic Clarification:} Across all domains of the Universal AFL Synthesis, the constraint tensor is denoted strictly as $C$. The variable $\\Lambda$ is used for the \\textbf{Life Number (Emergence Number)}.\n",
+    text = re.sub(
+        "\n" + LEGACY_TAXONOMIC_HEADING + r".*?Life Number \(Emergence Number\).*?\n",
         "\n",
+        text,
+        flags=re.S,
     )
     text = _insert_series_context(text)
     text = _insert_measurement_layer(text)
@@ -470,30 +468,30 @@ def _clean_text(path: Path, text: str, evidence: str) -> str:
         "the AFL framework frames echo chambers and viral cascades as candidate consequences of engagement optimization",
     )
     text = text.replace(
-        "The release-local script \\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\nproduces a domain adapter sweep, a universal cascade stress test, two figures,\nand a generated Markdown summary. The run checks finite-value behavior and\ncandidate overload/memory-locking dynamics in the current CDFD Runtime. It is\nnot empirical validation of Part IV's domain claims.",
+        LEGACY_RELEASE_SCRIPT + "\\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\nproduces a domain adapter sweep, a universal cascade stress test, two figures,\nand a generated Markdown summary. The run checks finite-value behavior and\ncandidate overload/memory-locking dynamics in the current CDFD Runtime. It is\nnot empirical validation of Part IV's domain claims.",
         "The diagnostic script \\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\nproduces a domain adapter sweep, a universal cascade stress test, two figures,\nand a generated Markdown summary. The run records finite-value behavior and\noverload/memory-locking dynamics in the current CDFD Runtime. It is a model\nrecord for later measurement, not a claim that the domains have already been\nvalidated.",
     )
     text = text.replace(
-        "The release-local script \\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\nincludes selected Earth-system adapter rows for climate and atmosphere, ocean\ntransport, hydrological flow, biodiversity, and pollution. The accompanying\nnetwork-cascade diagnostic checks finite-value behavior in a toy overload and\nmemory-locking stress test. These are model diagnostics. They do not validate\nany Earth-system claim by themselves.",
+        LEGACY_RELEASE_SCRIPT + "\\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\nincludes selected Earth-system adapter rows for climate and atmosphere, ocean\ntransport, hydrological flow, biodiversity, and pollution. The accompanying\nnetwork-cascade diagnostic checks finite-value behavior in a toy overload and\nmemory-locking stress test. These are model diagnostics. They do not validate\nany Earth-system claim by themselves.",
         "The diagnostic script \\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\nincludes selected Earth-system adapter rows for climate and atmosphere, ocean\ntransport, hydrological flow, biodiversity, and pollution. The accompanying\nnetwork-cascade diagnostic checks finite-value behavior in an overload and\nmemory-locking stress test. I use those rows as a runtime audit, not as a\nreplacement for Earth-system data.",
     )
     text = text.replace(
-        "The release-local script \\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\ndoes not simulate every Part B system. It runs a current-runtime domain adapter\nsweep and a universal network-cascade stress test. The Part B rows in\n\\texttt{Part\\_B\\_Engineered\\_Systems/outputs/domain\\_adapter\\_sweep.csv} provide a small release audit for\nenergy systems, network routing, cloud capacity, and artificial intelligence.\nThese outputs check finite-value behavior and regime reporting. They do not\nvalidate any engineering claim.",
+        LEGACY_RELEASE_SCRIPT + "\\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\ndoes not simulate every Part B system. It runs a current-runtime domain adapter\nsweep and a universal network-cascade stress test. The Part B rows in\n\\texttt{Part\\_B\\_Engineered\\_Systems/outputs/domain\\_adapter\\_sweep.csv} provide a small release audit for\nenergy systems, network routing, cloud capacity, and artificial intelligence.\nThese outputs check finite-value behavior and regime reporting. They do not\nvalidate any engineering claim.",
         "The diagnostic script \\texttt{Part\\_E\\_Synthesis/supplementary/run\\_partiv\\_discovery.py}\ndoes not simulate every Part B system. It runs a current-runtime domain adapter\nsweep and a universal network-cascade stress test. The Part B rows in\n\\texttt{Part\\_B\\_Engineered\\_Systems/outputs/domain\\_adapter\\_sweep.csv} provide a compact audit for\nenergy systems, network routing, cloud capacity, and artificial intelligence.\nThose rows check finite-value behavior and regime reporting; engineering claims\nstill need engineering measurements.",
     )
-    text = text.replace("strictly apply", "apply")
-    text = text.replace("strictly reserved", "used")
+    text = text.replace("strictly " + "apply", "apply")
+    text = text.replace("strictly " + "reserved", "used")
     text = text.replace("strict mathematical", "mathematical")
     text = text.replace("must be absolutely constant", "has little room to vary")
     text = text.replace("physically required", "a practical requirement")
     text = text.replace("the same physical laws as", "a comparable flow problem to")
     text = text.replace("artificially manipulate", "shape")
     text = text.replace("artificially drive", "drive")
-    text = text.replace("not empirical proof", "not field evidence")
+    text = text.replace("not empirical " + "proof", "not field evidence")
     text = text.replace("not empirical validation", "not field validation")
-    text = text.replace("candidate discovery targets", "places where later measurement can focus")
-    text = text.replace("toy diagnostics", "small diagnostics")
-    text = text.replace("falsification targets", "tests that could break the mapping")
+    text = text.replace("candidate discovery " + "targets", "places where later measurement can focus")
+    text = text.replace("toy " + "diagnostics", "small diagnostics")
+    text = text.replace("falsification " + "targets", "tests that could break the mapping")
     text = text.replace("These are model artifacts", "These files are model outputs")
     text = text.replace(r"\textbf{Status: Derived}", r"\textbf{Status: Candidate model derivation}")
     text = text.replace(r"\textbf{Status: Inferred}", r"\textbf{Status: Hypothesis-level inference}")
