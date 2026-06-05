@@ -1,14 +1,14 @@
 {
   "title": "CDFD Part IV: Universal Adaptive Flux Limitation - Constraint-Driven Flux Dynamics",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "creators": [
     {
       "name": "Mujjabi, Steve Bico, MD",
-      "affiliation": "Independent Researcher",
+      "affiliation": "Vura Labs",
       "orcid": "0009-0001-0556-5516"
     }
   ],
-  "description": "Public Part IV manuscript release for Constraint-Driven Flux Dynamics, with Part A-G manuscripts, per-Part outputs, current-runtime diagnostics, and cross-domain Adaptive Flux Limitation studies. This archive cites the confirmed DOI records for CDFD Part I, Part II, Part III, and the CDFD Runtime.",
+  "description": "Public Part IV manuscript release for Constraint-Driven Flux Dynamics, with Part A-G manuscripts, per-Part outputs, current-runtime diagnostics, and cross-domain Adaptive Flux Limitation studies. This archive is identified by DOI 10.5281/zenodo.20395901 and cites the confirmed DOI records for CDFD Part I, Part II, Part III, and the CDFD Runtime.",
   "license": "cc-by-4.0",
   "keywords": [
     "Constraint-Driven Flux Dynamics",
@@ -89,6 +89,11 @@
     "reproducible research"
   ],
   "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20395901",
+      "relation": "isIdenticalTo",
+      "scheme": "doi"
+    },
     {
       "identifier": "10.5281/zenodo.20250821",
       "relation": "references",

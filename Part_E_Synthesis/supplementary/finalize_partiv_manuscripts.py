@@ -21,6 +21,10 @@ AUTHOR = (
     "\n"
     r"\small Independent Researcher\\"
     "\n"
+    r"\small Founder, Vura Labs\\"
+    "\n"
+    r"\small Kampala, Uganda\\"
+    "\n"
     r"\small ORCID: 0009-0001-0556-5516}"
 )
 
@@ -73,7 +77,8 @@ REAL_BIB = r"""
   year = {2026},
   publisher = {Zenodo},
   doi = {10.5281/zenodo.20250821},
-  url = {https://doi.org/10.5281/zenodo.20250821}
+  url = {https://doi.org/10.5281/zenodo.20250821},
+  note = {DOI: \url{https://doi.org/10.5281/zenodo.20250821}}
 }
 
 @misc{MujjabiPartII2026,
@@ -82,7 +87,8 @@ REAL_BIB = r"""
   year = {2026},
   publisher = {Zenodo},
   doi = {10.5281/zenodo.20264779},
-  url = {https://doi.org/10.5281/zenodo.20264779}
+  url = {https://doi.org/10.5281/zenodo.20264779},
+  note = {DOI: \url{https://doi.org/10.5281/zenodo.20264779}}
 }
 
 @misc{MujjabiPartIII2026,
@@ -91,7 +97,19 @@ REAL_BIB = r"""
   year = {2026},
   publisher = {Zenodo},
   doi = {10.5281/zenodo.20344695},
-  url = {https://doi.org/10.5281/zenodo.20344695}
+  url = {https://doi.org/10.5281/zenodo.20344695},
+  note = {DOI: \url{https://doi.org/10.5281/zenodo.20344695}}
+}
+
+@misc{MujjabiPartIV2026,
+  author = {Mujjabi, Steve Bico},
+  title = {CDFD Part IV: Universal Adaptive Flux Limitation - Constraint-Driven Flux Dynamics},
+  year = {2026},
+  publisher = {Zenodo},
+  version = {1.0.1},
+  doi = {10.5281/zenodo.20395901},
+  url = {https://doi.org/10.5281/zenodo.20395901},
+  note = {DOI: \url{https://doi.org/10.5281/zenodo.20395901}}
 }
 
 @misc{CDFDRuntime2026,
@@ -101,7 +119,8 @@ REAL_BIB = r"""
   publisher = {Zenodo},
   version = {1.0.1},
   doi = {10.5281/zenodo.20343160},
-  url = {https://doi.org/10.5281/zenodo.20343160}
+  url = {https://doi.org/10.5281/zenodo.20343160},
+  note = {DOI: \url{https://doi.org/10.5281/zenodo.20343160}}
 }
 
 @article{BarabasiAlbert1999,
@@ -112,7 +131,8 @@ REAL_BIB = r"""
   number = {5439},
   pages = {509--512},
   year = {1999},
-  doi = {10.1126/science.286.5439.509}
+  doi = {10.1126/science.286.5439.509},
+  note = {DOI: \url{https://doi.org/10.1126/science.286.5439.509}}
 }
 
 @article{WattsStrogatz1998,
@@ -122,7 +142,8 @@ REAL_BIB = r"""
   volume = {393},
   pages = {440--442},
   year = {1998},
-  doi = {10.1038/30918}
+  doi = {10.1038/30918},
+  note = {DOI: \url{https://doi.org/10.1038/30918}}
 }
 
 @article{Holling1973,
@@ -132,7 +153,8 @@ REAL_BIB = r"""
   volume = {4},
   pages = {1--23},
   year = {1973},
-  doi = {10.1146/annurev.es.04.110173.000245}
+  doi = {10.1146/annurev.es.04.110173.000245},
+  note = {DOI: \url{https://doi.org/10.1146/annurev.es.04.110173.000245}}
 }
 
 @article{Turing1952,
@@ -143,7 +165,8 @@ REAL_BIB = r"""
   number = {641},
   pages = {37--72},
   year = {1952},
-  doi = {10.1098/rstb.1952.0012}
+  doi = {10.1098/rstb.1952.0012},
+  note = {DOI: \url{https://doi.org/10.1098/rstb.1952.0012}}
 }
 
 @article{Shannon1948,
@@ -154,7 +177,8 @@ REAL_BIB = r"""
   number = {3},
   pages = {379--423},
   year = {1948},
-  doi = {10.1002/j.1538-7305.1948.tb01338.x}
+  doi = {10.1002/j.1538-7305.1948.tb01338.x},
+  note = {DOI: \url{https://doi.org/10.1002/j.1538-7305.1948.tb01338.x}}
 }
 
 @article{BakTangWiesenfeld1987,
@@ -165,7 +189,8 @@ REAL_BIB = r"""
   number = {4},
   pages = {381--384},
   year = {1987},
-  doi = {10.1103/PhysRevLett.59.381}
+  doi = {10.1103/PhysRevLett.59.381},
+  note = {DOI: \url{https://doi.org/10.1103/PhysRevLett.59.381}}
 }
 
 @book{Newman2010,
@@ -206,13 +231,15 @@ def _runtime_evidence_paragraph() -> str:
             r"I use it as a finite-value stress test and as a record of what the present runtime actually produces."
         )
     threshold = cascade.get("parameters", {}).get("threshold", 1.5)
+    run_date = cascade.get("provenance", {}).get("timestamp_utc", "").partition("T")[0] or "current"
     return (
         r"\subsection{Current Runtime Diagnostic: Universal Network Cascade}"
         "\n"
         r"The diagnostic script \texttt{Part\_E\_Synthesis/supplementary/run\_partiv\_discovery.py} keeps this "
         r"paper tied to the current CDFD Runtime \cite{CDFDRuntime2026}, including RK4 field updates, "
-        r"surface dynamics, structural-memory diffusion, and a finite-value audit. In the May 2026 "
-        f"run, the localized hub-drive stress test ended with hub $\\Psi_s={final['hub_psi_s']:.3g}$, "
+        r"surface dynamics, structural-memory diffusion, and a finite-value audit. "
+        f"In the {run_date} runtime pass, the localized hub-drive stress test ended with hub "
+        f"$\\Psi_s={final['hub_psi_s']:.3g}$, "
         f"peak network $\\Psi_s={summary['peak_network_psi_s']:.3g}$, "
         f"{final['overloaded_nodes']} nodes above $\\Psi_s>{threshold}$, and "
         f"{summary['max_memory_locked_nodes']} maximum memory-locked nodes. "
@@ -266,6 +293,13 @@ def _replace_title(path: Path, text: str) -> str:
 
 
 def _replace_stale_numerical_blocks(text: str, evidence: str) -> str:
+    text = re.sub(
+        r"\\subsection\{Current Runtime Diagnostic: Universal Network Cascade\}\s*"
+        r"The diagnostic script .*?not as a substitute for field data\.",
+        lambda _match: evidence,
+        text,
+        flags=re.S,
+    )
     text = re.sub(
         r"\\subsection\{Current Runtime Diagnostic: Universal Network Cascade\}\s*"
         + re.escape(LEGACY_RELEASE_SCRIPT)
@@ -404,14 +438,20 @@ def _clean_text(path: Path, text: str, evidence: str) -> str:
     text = text.replace("AFL\\_rewrite\\_template\\_and\\_rubric.md", "CLAIM\\_STATUS.md")
     text = text.replace("notebooks/supplementary", "supplementary/supplementary")
     text = text.replace(r"$\csname Lambda\endcsname$", r"$\Lambda$")
-    text = re.sub(r"\\date\{.*?\}", r"\\date{May 2026}", text, count=1, flags=re.S)
+    text = re.sub(
+        r"\\date\{.*?\}",
+        lambda _match: r"\date{May 2026}",
+        text,
+        count=1,
+        flags=re.S,
+    )
     text = _replace_author(text)
-    text = OVERCLAIM_ABSTRACT_PATTERN.sub(DISCIPLINED_ABSTRACT, text)
+    text = OVERCLAIM_ABSTRACT_PATTERN.sub(lambda _match: DISCIPLINED_ABSTRACT, text)
     text = re.sub(
         r"This paper treats the named " + r"domain as a Constraint-Driven Flux Dynamics \(CDFD\).*?"
         + re.escape("not empirical " + "proof")
         + r"\.",
-        DISCIPLINED_ABSTRACT,
+        lambda _match: DISCIPLINED_ABSTRACT,
         text,
         flags=re.S,
     )
@@ -509,7 +549,11 @@ def _clean_text(path: Path, text: str, evidence: str) -> str:
     )
     text = re.sub(
         r"Release-local runtime diagnostics are available under \\texttt\{supplementary/\},\s*\\texttt\{outputs/\}, and \\texttt\{figures/\}\.",
-        r"Release-local runtime diagnostics are available under each Part's \texttt{outputs/} folder, with release-wide synthesis artifacts under \texttt{Part\_E\_Synthesis/supplementary/}, \texttt{Part\_E\_Synthesis/outputs/}, and \texttt{Part\_E\_Synthesis/figures/}.",
+        lambda _match: (
+            r"Release-local runtime diagnostics are available under each Part's \texttt{outputs/} folder, "
+            r"with release-wide synthesis artifacts under \texttt{Part\_E\_Synthesis/supplementary/}, "
+            r"\texttt{Part\_E\_Synthesis/outputs/}, and \texttt{Part\_E\_Synthesis/figures/}."
+        ),
         text,
         flags=re.S,
     )

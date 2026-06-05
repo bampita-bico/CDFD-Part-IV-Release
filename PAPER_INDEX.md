@@ -4,11 +4,18 @@ This is the active manuscript map for `CDFD Part IV: Universal Adaptive Flux
 Limitation`. The archive is organized by domain section, with paper labels from
 `Paper A-01` through `Paper G-03`.
 
-All papers cite the public CDFD Runtime software archive:
+All papers cite the Part IV archive DOI and the public CDFD Runtime software archive:
+
+https://doi.org/10.5281/zenodo.20395901
 https://doi.org/10.5281/zenodo.20343160
 
 The papers now cite the earlier CDFD releases directly. Runtime files are model
 outputs and audit records; the domain claims still stand or fall on later data.
+
+Each paper carries the same reviewable upgrade spine: observable translation,
+minimal coupled model, native architecture diagram, cross-scale boundary,
+evidence ladder, baseline-model comparison, and an explicit result that would
+make the CDFD/AFL translation unnecessary.
 
 ## Part A: Earth Systems
 

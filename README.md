@@ -8,12 +8,20 @@ subatomic systems, and abstract or cognitive systems.
 
 ## Author
 
-Steve Bico Mujjabi, MD
+Steve Bico Mujjabi, MD<br>
+Independent Researcher<br>
+Founder, Vura Labs<br>
+Kampala, Uganda<br>
 ORCID: https://orcid.org/0009-0001-0556-5516
+
+Institutional home: **Vura Labs**
 
 ## Release Naming
 
 CDFD Part IV: Universal Adaptive Flux Limitation - Constraint-Driven Flux Dynamics
+
+Part IV archive DOI:
+https://doi.org/10.5281/zenodo.20395901
 
 ## Keywords
 
@@ -45,16 +53,34 @@ open science; preprint.
 - `Part_F_Cosmic_and_Subatomic_Systems/` - stellar, galactic, black-hole, nuclear, and plasma manuscripts.
 - `Part_G_Abstract_and_Cognitive_Systems/` - language, science, and AI emergence manuscripts.
 - Each Part folder carries its own `papers/`, `PDFs/`, and `outputs/` accessories.
-- `Part_E_Synthesis/supplementary/` - release-local runtime and build scripts using the current adjacent `cdfd_runtime`.
+- `Part_E_Synthesis/supplementary/` - release-local runtime and build scripts using the current adjacent `CDFD-Runtime`.
 - `Part_E_Synthesis/figures/` - regenerated release-wide runtime figures.
 - `CLAIM_STATUS.md`, `MUJJABI_UNIVERSAL_LAWS_AND_TESTS.md`, and `REPRODUCIBILITY.md` - claim discipline, laws/tests, and rebuild instructions.
 - `CITATION.cff`, `.zenodo.json`, `LICENSE`, and `LICENSE_BOUNDARY.md` - citation, deposit, and licensing metadata.
+
+## Manuscript Upgrade Standard
+
+Every active Part A-G manuscript now contains:
+
+- a paper-specific observable map for `Phi`, `C`, `S`, `M_s`, and the target outcome;
+- a minimal coupled model that separates throughput, constraint accumulation,
+  response, retained state, and cross-node coupling;
+- a declared spatial, temporal, or network scale;
+- a native TikZ architecture diagram;
+- an evidence ladder with a load-ramp test, recovery-memory test, baseline-model
+  comparison, and explicit falsifier;
+- direct citations to CDFD Parts I-IV and the CDFD Runtime, plus the verified
+  cross-domain reference layer appropriate to the paper family.
+
+The synthesis paper also embeds the two release-local runtime PNGs. The
+reproducible manuscript transformation is maintained in
+`Part_E_Synthesis/supplementary/major_upgrade_partiv_manuscripts.py`.
 
 ## Current Runtime Discoveries
 
 The Part IV release has a current-runtime discovery pass:
 
-- `Part_E_Synthesis/supplementary/run_partiv_discovery.py` imports the adjacent `cdfd_runtime`
+- `Part_E_Synthesis/supplementary/run_partiv_discovery.py` imports the adjacent `CDFD-Runtime`
   and writes all artifacts inside this release tree.
 - `Part_E_Synthesis/outputs/universal_collapse.json` stores the universal network-cascade stress test with finite-value auditing.
 - `Part_E_Synthesis/outputs/domain_adapter_sweep.csv` and `.json` hold the full selected-domain adapter sweep.
@@ -93,6 +119,9 @@ separately from the runtime itself.
 Runtime software DOI:
 https://doi.org/10.5281/zenodo.20343160
 
+Part IV archive DOI:
+https://doi.org/10.5281/zenodo.20395901
+
 Earlier CDFD releases cited by this archive:
 
 - Part I: https://doi.org/10.5281/zenodo.20250821
@@ -107,4 +136,4 @@ International License (CC BY 4.0). See `LICENSE` and `LICENSE_BOUNDARY.md`.
 ## Citation
 
 Mujjabi, S. B. (2026). CDFD Part IV: Universal Adaptive Flux Limitation -
-Constraint-Driven Flux Dynamics.
+Constraint-Driven Flux Dynamics. Zenodo. https://doi.org/10.5281/zenodo.20395901

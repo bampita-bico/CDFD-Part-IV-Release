@@ -51,6 +51,12 @@ A Part IV claim is stronger when it gives:
 - a condition under which the AFL interpretation would fail;
 - how the claim differs from an existing domain model.
 
+The shared Part IV equations are a candidate architecture, not evidence that
+Earth, engineered, socioeconomic, biological, cosmic, and cognitive systems
+share one material mechanism. A cross-domain result requires declared
+normalization, aggregation, and scale rules, followed by comparison against the
+best ordinary model in each domain.
+
 ## Falsification Standard
 
 The universal Part IV framing weakens if a domain cannot be mapped into the

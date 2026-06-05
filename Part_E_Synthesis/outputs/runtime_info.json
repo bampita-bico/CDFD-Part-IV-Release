@@ -214,7 +214,7 @@
       "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
       "python": "3.14.4",
       "runtime": "CDFD Runtime",
-      "timestamp_utc": "2026-05-26T12:21:15+00:00"
+      "timestamp_utc": "2026-06-04T18:45:01+00:00"
     },
     "status": "ok",
     "warnings": []
@@ -233,30 +233,65 @@
     "kind": "runtime_info",
     "payload": {
       "app_boundary": {
-        "allowed_keys_env": "CDFD_RUNTIME_API_KEYS",
-        "api_key_check": "python cdfd.py auth",
-        "caller_key_env": "CDFD_APP_API_KEY",
-        "llm_layer": "applications only; not inside the runtime engine",
+        "llm_layer": "optional provider calls above the deterministic runtime engine",
+        "llm_research_call": "python cdfd.py llm explain runs/<run>/result.json",
+        "provider_inventory": "python cdfd.py llm providers",
+        "provider_key_envs": [
+          "OPENAI_API_KEY",
+          "ANTHROPIC_API_KEY",
+          "GEMINI_API_KEY",
+          "MISTRAL_API_KEY",
+          "GROQ_API_KEY",
+          "OPENROUTER_API_KEY",
+          "CDFD_LLM_API_KEY"
+        ],
+        "provider_key_status": "python cdfd.py llm status",
         "vos": "Vacuum OS orchestration layer above CDFD Runtime"
       },
       "cli_status": "available",
+      "commands": [
+        "info",
+        "domains",
+        "demo",
+        "diagnostics",
+        "doctor",
+        "gallery",
+        "compare",
+        "report",
+        "explain",
+        "llm",
+        "validate",
+        "run",
+        "export",
+        "auth"
+      ],
       "core_surfaces": [
         "engine",
         "domains",
         "dsl",
         "runtime",
         "validation",
-        "discovery",
-        "webapp"
+        "discovery"
       ],
       "domain_count": 196,
       "entrypoints": {
         "cli": "python cdfd.py",
+        "diagnostics_export": "python cdfd.py diagnostics --out experiments/outputs/part_ii_runtime_diagnostics.json",
         "legacy_domain_cli": "python -m domains",
-        "webapp": "python -m webapp.run_server"
+        "webapp_optional": "python -m webapp.run_server"
       },
       "language": "CDFL",
-      "name": "CDFD Runtime"
+      "name": "CDFD Runtime",
+      "optional_surfaces": [
+        "webapp"
+      ],
+      "platform_order": [
+        "engine",
+        "cli",
+        "api",
+        "webapp"
+      ],
+      "primary_surface": "cli"
     },
     "provenance": {
       "command": "cdfd info",
@@ -264,7 +299,7 @@
       "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
       "python": "3.14.4",
       "runtime": "CDFD Runtime",
-      "timestamp_utc": "2026-05-26T12:21:15+00:00"
+      "timestamp_utc": "2026-06-04T18:45:01+00:00"
     },
     "status": "ok",
     "warnings": []

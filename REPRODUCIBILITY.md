@@ -58,6 +58,19 @@ candidate-result language, normalizes Part A-G paper titles, updates the
 universal runtime diagnostic paragraph, removes placeholder `nocite` blocks,
 and refreshes the compact real bibliography.
 
+## Apply the Major Manuscript Upgrade
+
+After final cleanup, apply the idempotent depth and visual upgrade:
+
+```bash
+/home/bampita/Projects/CDFD/.venv/bin/python Part_E_Synthesis/supplementary/major_upgrade_partiv_manuscripts.py
+```
+
+The script keeps existing specialized material, replaces generic abstracts,
+adds one paper-specific operational model and native TikZ diagram to every
+manuscript, adds an evidence ladder and falsifier, disciplines exact-identity
+overclaims, and preserves the verified DOI-bearing citation layer.
+
 ## Build Interactive Panels
 
 ```bash
