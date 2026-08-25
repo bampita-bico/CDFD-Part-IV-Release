@@ -3,6 +3,7 @@
 **Release date:** 25 August 2026  
 **Tag:** `v1.1.0`  
 **License:** CC BY 4.0  
+**This version DOI (45-paper):** [10.5281/zenodo.22090532](https://doi.org/10.5281/zenodo.22090532)  
 **Historical archive DOI (58-paper):** [10.5281/zenodo.20395901](https://doi.org/10.5281/zenodo.20395901)
 
 ## Summary
@@ -79,4 +80,5 @@ Companion scholarly releases: Parts I–III. Executable software: [CDFD Runtime 
 
 ## DOI note
 
-`10.5281/zenodo.20395901` identifies the **historical 58-paper** archive. Deposit a **new Zenodo version** for this 45-paper `v1.1.0` snapshot before citing it by DOI.
+- **Cite this 45-paper snapshot:** [10.5281/zenodo.22090532](https://doi.org/10.5281/zenodo.22090532) (v1.1.0)
+- **Historical 58-paper archive only:** [10.5281/zenodo.20395901](https://doi.org/10.5281/zenodo.20395901)
