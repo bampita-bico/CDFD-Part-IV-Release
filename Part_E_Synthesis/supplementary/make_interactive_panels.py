@@ -39,6 +39,7 @@ def main() -> int:
     table = "\n".join(
         "<tr>"
         f"<td>{html.escape(row['part'])}</td>"
+        f"<td>{html.escape(row.get('active_papers', ''))}</td>"
         f"<td>{html.escape(row['domain'])}</td>"
         f"<td>{html.escape(str(row['regime']))}</td>"
         f"<td>{float(row['final_mean_psi']):.6g}</td>"
@@ -69,7 +70,7 @@ def main() -> int:
 <body>
   <h1>CDFD Part IV Runtime Panels</h1>
   <p>These files are model outputs from the release diagnostics. They document runtime behavior and point to measurements that can test the mapping.</p>
-  <h2>Universal Network Cascade</h2>
+  <h2>Network-Cascade Stress Test</h2>
   <p>Final hub <code>Psi_s</code>: {final.get('hub_psi_s', 'not generated')} |
      overloaded nodes: {final.get('overloaded_nodes', 'not generated')} |
      memory-locked nodes: {final.get('memory_locked_nodes', 'not generated')}</p>
@@ -78,7 +79,7 @@ def main() -> int:
   </div>
   <h2>Top Domain Adapter Stress Responses</h2>
   <table>
-    <thead><tr><th>Part</th><th>Domain</th><th>Regime</th><th>Final mean Psi_s</th></tr></thead>
+    <thead><tr><th>Part</th><th>Active paper(s)</th><th>Domain</th><th>Regime</th><th>Final mean Psi_s</th></tr></thead>
     <tbody>{table}</tbody>
   </table>
   <h2>Files</h2>

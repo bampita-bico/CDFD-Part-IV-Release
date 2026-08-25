@@ -15,12 +15,12 @@
     "threshold": 1.5
   },
   "provenance": {
-    "command": "partiv universal network cascade",
+    "command": "partiv network-cascade stress test",
     "language": "CDFL",
     "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
     "python": "3.14.4",
     "runtime": "CDFD Runtime",
-    "timestamp_utc": "2026-06-04T18:45:05+00:00"
+    "timestamp_utc": "2026-08-18T20:23:27+00:00"
   },
   "series": {
     "C_hub": [

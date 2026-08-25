@@ -4,6 +4,7 @@
     "non_finite_paths": []
   },
   "parameters": {
+    "active_manifest": "Part_E_Synthesis/supplementary/active_paper_manifest.json",
     "nx": 8,
     "ny": 8,
     "steps": 8
@@ -15,10 +16,11 @@
     "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
     "python": "3.14.4",
     "runtime": "CDFD Runtime",
-    "timestamp_utc": "2026-06-04T18:45:05+00:00"
+    "timestamp_utc": "2026-08-18T20:23:27+00:00"
   },
   "rows": [
     {
+      "active_papers": "G-01",
       "domain": "linguistics",
       "errors": "",
       "final_mean_C": 0.2191217576556781,
@@ -31,6 +33,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "G-02",
       "domain": "epistemology",
       "errors": "",
       "final_mean_C": 0.2241017976023981,

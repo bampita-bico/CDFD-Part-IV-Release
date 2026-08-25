@@ -1,6 +1,6 @@
-# CDFD Part IV: Universal Adaptive Flux Limitation
+# CDFD Part IV: Cross-Domain Adaptive Flux Limitation
 
-This release is the public Part IV archive for Constraint-Driven Flux Dynamics.
+This local release revision is the active Part IV archive for Constraint-Driven Flux Dynamics.
 Part IV takes the flow, constraint, responsiveness, and memory notation from the
 earlier CDFD releases and tests how far it can travel across Earth systems,
 engineered systems, socioeconomic systems, domain applications, cosmic and
@@ -18,15 +18,20 @@ Institutional home: **Vura Labs**
 
 ## Release Naming
 
-CDFD Part IV: Universal Adaptive Flux Limitation - Constraint-Driven Flux Dynamics
+CDFD Part IV: Cross-Domain Adaptive Flux Limitation - Constraint-Driven Flux Dynamics
 
-Part IV archive DOI:
+The active local revision contains 45 manuscripts after the 2026-08-18
+consolidation. Detailed predecessor and consolidation working material is held
+in a separate local archive; see `ARCHIVE_NOTICE_2026-08-24.md` before citing
+or depositing this revision.
+
+Historical Part IV archive DOI (pre-consolidation 58-paper release):
 https://doi.org/10.5281/zenodo.20395901
 
 ## Keywords
 
 Constraint-Driven Flux Dynamics; CDFD; CDFL; CDFD Runtime; Adaptive Flux
-Limitation; AFL; universal systems science; Earth systems; climate dynamics;
+Limitation; AFL; cross-domain systems modelling; Earth systems; climate dynamics;
 oceanography; hydrology; ecology; biodiversity; infrastructure; electrical
 grids; networks; artificial intelligence; socioeconomic systems; governance;
 migration; financial systems; epidemiology; immunology; population genetics;
@@ -49,13 +54,17 @@ open science; preprint.
 - `Part_B_Engineered_Systems/` - infrastructure, networks, AI, and computing manuscripts.
 - `Part_C_Socioeconomic_Systems/` - economic, institutional, and human-system manuscripts.
 - `Part_D_Domain_Applications/` - cross-domain applications from consciousness to immunology.
-- `Part_E_Synthesis/` - universal synthesis manuscript.
+- `Part_E_Synthesis/` - cross-domain synthesis manuscript.
 - `Part_F_Cosmic_and_Subatomic_Systems/` - stellar, galactic, black-hole, nuclear, and plasma manuscripts.
 - `Part_G_Abstract_and_Cognitive_Systems/` - language, science, and AI emergence manuscripts.
 - Each Part folder carries its own `papers/`, `PDFs/`, and `outputs/` accessories.
 - `Part_E_Synthesis/supplementary/` - release-local runtime and build scripts using the current adjacent `CDFD-Runtime`.
+- `Part_E_Synthesis/supplementary/active_paper_manifest.json` - the authoritative map from runtime adapter rows to active papers; archived predecessors are excluded.
+- `Part_A_Earth_Systems/empirical_hydrology_study/` - frozen one-site USGS hydrology analysis registration, raw response, code, and held-out result.
 - `Part_E_Synthesis/figures/` - regenerated release-wide runtime figures.
-- `CLAIM_STATUS.md`, `MUJJABI_UNIVERSAL_LAWS_AND_TESTS.md`, and `REPRODUCIBILITY.md` - claim discipline, laws/tests, and rebuild instructions.
+- `PART_IV_METHODS_AND_CLAIM_BOUNDARY.md`, `CLAIM_STATUS.md`, `PART_IV_HYPOTHESES_AND_TESTS.md`, `REPRODUCIBILITY.md`, and `ARCHIVE_NOTICE_2026-08-24.md` - common methods, claim discipline, hypotheses/tests, rebuild instructions, and archive boundary.
+- `PAPER_INDEX.md` - active paper map.
+- `methods/` - shared auditable toy-model declaration protocol.
 - `CITATION.cff`, `.zenodo.json`, `LICENSE`, and `LICENSE_BOUNDARY.md` - citation, deposit, and licensing metadata.
 
 ## Manuscript Upgrade Standard
@@ -63,14 +72,11 @@ open science; preprint.
 Every active Part A-G manuscript now contains:
 
 - a paper-specific observable map for `Phi`, `C`, `S`, `M_s`, and the target outcome;
-- a minimal coupled model that separates throughput, constraint accumulation,
-  response, retained state, and cross-node coupling;
-- a declared spatial, temporal, or network scale;
-- a native TikZ architecture diagram;
-- an evidence ladder with a load-ramp test, recovery-memory test, baseline-model
-  comparison, and explicit falsifier;
+- a declared spatial, temporal, or network scale, native baseline, and explicit falsifier;
 - direct citations to CDFD Parts I-IV and the CDFD Runtime, plus the verified
-  cross-domain reference layer appropriate to the paper family.
+  cross-domain reference layer appropriate to the paper family; and
+- a pointer to the shared methods and claim-boundary companion rather than a
+  duplicate generic methods block.
 
 The synthesis paper also embeds the two release-local runtime PNGs. The
 reproducible manuscript transformation is maintained in
@@ -82,7 +88,7 @@ The Part IV release has a current-runtime discovery pass:
 
 - `Part_E_Synthesis/supplementary/run_partiv_discovery.py` imports the adjacent `CDFD-Runtime`
   and writes all artifacts inside this release tree.
-- `Part_E_Synthesis/outputs/universal_collapse.json` stores the universal network-cascade stress test with finite-value auditing.
+- `Part_E_Synthesis/outputs/universal_collapse.json` stores the network-cascade stress test with finite-value auditing. The filename is retained for runtime compatibility.
 - `Part_E_Synthesis/outputs/domain_adapter_sweep.csv` and `.json` hold the full selected-domain adapter sweep.
 - Each non-synthesis Part folder has its own `outputs/domain_adapter_sweep.csv` and `.json` slice.
 - `Part_E_Synthesis/figures/universal_cascade.png` and `Part_E_Synthesis/figures/domain_sweep_psi.png` visualize the candidate cascade and adapter sweep.
@@ -98,11 +104,16 @@ notation as a modelling language across many domains. A domain claim becomes
 strong only when the variables, proxies, datasets, time scales, and failure
 conditions are made concrete enough for another person to test.
 
+The first completed Part IV field-data check is the one-site hydrology
+comparison. Its frozen CDFD/AFL-style extension did not demonstrate held-out
+improvement over the declared native baseline; the result is retained as a
+negative case rather than treated as confirmation.
+
 ## Reading Order
 
 1. `PAPER_INDEX.md`
 2. `CLAIM_STATUS.md`
-3. `MUJJABI_UNIVERSAL_LAWS_AND_TESTS.md`
+3. `PART_IV_HYPOTHESES_AND_TESTS.md`
 4. `REPRODUCIBILITY.md`
 5. `Part_E_Synthesis/outputs/interactive_index.html` after regeneration
 6. The Part A-G manuscripts
@@ -135,5 +146,5 @@ International License (CC BY 4.0). See `LICENSE` and `LICENSE_BOUNDARY.md`.
 
 ## Citation
 
-Mujjabi, S. B. (2026). CDFD Part IV: Universal Adaptive Flux Limitation -
+Mujjabi, S. B. (2026). CDFD Part IV: Cross-Domain Adaptive Flux Limitation -
 Constraint-Driven Flux Dynamics. Zenodo. https://doi.org/10.5281/zenodo.20395901

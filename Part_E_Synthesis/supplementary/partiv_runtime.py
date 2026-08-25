@@ -46,6 +46,7 @@ PART_DIRS = {
 
 OUTPUTS_DIR = RELEASE_ROOT / "Part_E_Synthesis" / "outputs"
 FIGURES_DIR = RELEASE_ROOT / "Part_E_Synthesis" / "figures"
+ACTIVE_MANIFEST = RELEASE_ROOT / "Part_E_Synthesis" / "supplementary" / "active_paper_manifest.json"
 
 if str(RUNTIME_ROOT) not in sys.path:
     sys.path.insert(0, str(RUNTIME_ROOT))
@@ -56,35 +57,26 @@ from runtime.diagnostics import clean_json, finite_audit, runtime_provenance  # 
 from runtime.runner import list_domains, run_domain, runtime_info  # noqa: E402
 
 
-DOMAIN_SWEEP: list[tuple[str, str, str]] = [
-    ("Part A", "climate and atmosphere", "climate"),
-    ("Part A", "ocean transport", "oceanography"),
-    ("Part A", "hydrological flow", "hydrology"),
-    ("Part A", "biodiversity network", "biodiversity"),
-    ("Part A", "pollution constraint", "pollution"),
-    ("Part B", "energy systems", "energy_systems"),
-    ("Part B", "network routing", "networks"),
-    ("Part B", "cloud capacity", "cloud_computing"),
-    ("Part B", "artificial intelligence", "artificial_intelligence"),
-    ("Part C", "macroeconomic flow", "economics"),
-    ("Part C", "trade corridors", "trade_routes"),
-    ("Part C", "migration pressure", "migration"),
-    ("Part C", "education throughput", "education"),
-    ("Part C", "governance pressure", "politics"),
-    ("Part D", "consciousness", "consciousness"),
-    ("Part D", "epidemiology", "epidemiology"),
-    ("Part D", "geology", "geology"),
-    ("Part D", "quantum mechanics", "quantum_mechanics"),
-    ("Part D", "ecology", "ecology"),
-    ("Part D", "information flow", "information_theory"),
-    ("Part D", "immune response", "immunology"),
-    ("Part D", "population genetics", "genetics"),
-    ("Part F", "astrophysics", "astrophysics"),
-    ("Part F", "nuclear dynamics", "nuclear_physics"),
-    ("Part F", "plasma dynamics", "plasma_physics"),
-    ("Part G", "language evolution", "linguistics"),
-    ("Part G", "science paradigms", "epistemology"),
-]
+def active_manifest() -> dict[str, Any]:
+    manifest = json.loads(ACTIVE_MANIFEST.read_text())
+    active_sources = sorted(RELEASE_ROOT.glob("Part_*/papers/*.tex"))
+    if len(active_sources) != manifest["active_manuscript_count"]:
+        raise RuntimeError("active paper manifest does not match the active manuscript inventory")
+    active_labels = {
+        f"{path.relative_to(RELEASE_ROOT).parts[0].split('_')[1]}-{int(path.stem.split('_')[0]):02d}"
+        for path in active_sources
+    }
+    mapped_labels = {
+        paper
+        for adapter in manifest["runtime_adapters"]
+        for paper in adapter["active_papers"]
+    }
+    declared_without_adapter = set(manifest["papers_without_runtime_adapter"])
+    if active_labels != mapped_labels | declared_without_adapter:
+        missing = sorted(active_labels - mapped_labels - declared_without_adapter)
+        stale = sorted((mapped_labels | declared_without_adapter) - active_labels)
+        raise RuntimeError(f"active paper manifest mismatch; missing={missing}, stale={stale}")
+    return manifest
 
 
 def _write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -116,8 +108,9 @@ def _write_output_readmes() -> None:
             text = (
                 "# Part E Synthesis Outputs\n\n"
                 "This folder keeps the release-wide Part IV runtime record: current-runtime provenance, "
-                "the universal network-cascade stress test, the full domain adapter sweep, the HTML panel "
-                "index, and generated summaries. Figures live in `../figures/`.\n\n"
+                "the network-cascade stress test, the full domain adapter sweep, the HTML panel "
+                "index, and generated summaries. Runtime rows are mapped to active papers by "
+                "`Part_E_Synthesis/supplementary/active_paper_manifest.json`. Figures live in `../figures/`.\n\n"
                 "Read these files as model output and bookkeeping for later measurement, not as field evidence.\n"
             )
         else:
@@ -125,7 +118,8 @@ def _write_output_readmes() -> None:
                 f"# {part} Runtime Outputs\n\n"
                 "This folder keeps the Part-specific slice of the current-runtime domain adapter sweep. "
                 "The release-wide cascade, full sweep, figures, and HTML panel index live under "
-                "`Part_E_Synthesis/outputs/` and `Part_E_Synthesis/figures/` from the release root.\n\n"
+                "`Part_E_Synthesis/outputs/` and `Part_E_Synthesis/figures/` from the release root. "
+                "Each row identifies its active paper destination through the release manifest.\n\n"
                 "Read these files as model output and bookkeeping for later measurement, not as field evidence.\n"
             )
         (out / "README.md").write_text(text)
@@ -162,7 +156,11 @@ def run_current_runtime_summary() -> dict[str, Any]:
 
 def run_domain_adapter_sweep(nx: int = 8, ny: int = 8, steps: int = 8) -> dict[str, Any]:
     rows: list[dict[str, Any]] = []
-    for part, label, domain in DOMAIN_SWEEP:
+    manifest = active_manifest()
+    for adapter in manifest["runtime_adapters"]:
+        part = adapter["part"]
+        label = adapter["label"]
+        domain = adapter["domain"]
         result = run_domain(domain, {}, nx=nx, ny=ny, steps=steps)
         payload = result.get("payload", {})
         final = payload.get("final", {})
@@ -172,6 +170,7 @@ def run_domain_adapter_sweep(nx: int = 8, ny: int = 8, steps: int = 8) -> dict[s
                 "part": part,
                 "label": label,
                 "domain": domain,
+                "active_papers": "; ".join(adapter["active_papers"]),
                 "status": result.get("status"),
                 "regime": payload.get("regime"),
                 "initial_mean_psi": initial.get("mean_psi"),
@@ -183,7 +182,9 @@ def run_domain_adapter_sweep(nx: int = 8, ny: int = 8, steps: int = 8) -> dict[s
         )
     return {
         "provenance": runtime_provenance("partiv domain adapter sweep"),
-        "parameters": {"nx": nx, "ny": ny, "steps": steps},
+        "parameters": {"nx": nx, "ny": ny, "steps": steps, "active_manifest": str(ACTIVE_MANIFEST.relative_to(RELEASE_ROOT))},
+        "active_revision": manifest["revision"],
+        "papers_without_runtime_adapter": manifest["papers_without_runtime_adapter"],
         "rows": rows,
         "finite_audit": finite_audit(rows),
     }
@@ -268,7 +269,7 @@ def run_universal_network_cascade(
         "final": final,
     }
     payload = {
-        "provenance": runtime_provenance("partiv universal network cascade"),
+        "provenance": runtime_provenance("partiv network-cascade stress test"),
         "status": "candidate_simulation_result",
         "interpretation": (
             "A localized high-drive hub creates an overload and memory-locking "
@@ -378,7 +379,7 @@ def write_summary_markdown(runtime: dict[str, Any], cascade: dict[str, Any], swe
         f"- Registered domains: {runtime.get('domain_count')}",
         "- Runtime boundary: application/VOS layer kept outside the numerical engine.",
         "",
-        "## Universal Network Cascade",
+        "## Network-Cascade Stress Test",
         "",
         f"- Final hub `Psi_s`: {final['hub_psi_s']:.6g}",
         f"- Peak network `Psi_s`: {cascade['summary']['peak_network_psi_s']:.6g}",
@@ -391,15 +392,17 @@ def write_summary_markdown(runtime: dict[str, Any], cascade: dict[str, Any], swe
         "## Domain Adapter Sweep",
         "",
         f"- Domains run: {len(rows)}",
+        f"- Active papers represented by an adapter: {len({paper for row in rows for paper in row['active_papers'].split('; ')})}",
+        f"- Active papers without an adapter: {len(sweep['papers_without_runtime_adapter'])}",
         f"- Overload regime: {len(overload)}",
         f"- Balanced regime: {len(balanced)}",
         f"- Constrained regime: {len(constrained)}",
         "",
-        "| Domain | Part | Regime | Final mean Psi_s |",
-        "|---|---|---:|---:|",
+        "| Domain | Active paper(s) | Part | Regime | Final mean Psi_s |",
+        "|---|---|---|---:|---:|",
     ]
     for row in top:
-        lines.append(f"| `{row['domain']}` | {row['part']} | {row['regime']} | {float(row['final_mean_psi']):.6g} |")
+        lines.append(f"| `{row['domain']}` | {row['active_papers']} | {row['part']} | {row['regime']} | {float(row['final_mean_psi']):.6g} |")
     lines.extend(
         [
             "",

@@ -13,9 +13,6 @@
 \usepackage{geometry}
 \geometry{margin=2.5cm}
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
-\newtheorem{theorem}{Theorem}
-\newtheorem{proposition}{Proposition}
-\newtheorem{definition}{Definition}
 \newtheorem{lemma}{Lemma}
 \newtheorem{corollary}{Corollary}
 \newtheorem{criterion}{Criterion}
@@ -29,7 +26,7 @@
 \small Founder, Vura Labs\\
 \small Kampala, Uganda\\
 \small ORCID: 0009-0001-0556-5516}
-\date{May 2026}
+\date{August 2026}
 
 
 \newcommand{\EarthSuppPath}{Part\_A\_Earth\_Systems/supplementary/supplementary\_earth\_}
@@ -38,6 +35,10 @@
 \newcommand{\DomainSuppPath}{Part\_D\_Domain\_Applications/supplementary/supplementary\_dom\_}
 \begin{document}
 \maketitle
+
+% BEGIN SHARED-METHODS POINTER
+\noindent\textit{Shared Part IV notation and evidence boundaries are defined in \path{PART_IV_METHODS_AND_CLAIM_BOUNDARY.md}. This paper states only its local observables, comparison, and failure conditions.}
+% END SHARED-METHODS POINTER
 
 \begin{abstract}
 This paper treats atmospheric circulation as a CDFD/AFL modelling hypothesis.
@@ -48,45 +49,6 @@ meteorology or climate dynamics. The purpose is to name the measurable flux,
 constraint, responsiveness, and memory terms that make atmospheric overload or
 stagnation testable.
 \end{abstract}
-
-\section*{Symbol Conventions}
-
-\noindent\textbf{CDFD/AFL Part IV symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\hline
-Symbol & Part IV meaning & Cross-domain reading \\
-\hline
-$\Phi$ & Driving flux or throughput & Energy, matter, signal, capital, information, traffic, force, or biological load entering a system \\
-$C$ & Active constraint or capacity burden & Bottleneck, resistance, boundary, scarcity, toxicity, regulation, topology, latency, or load-bearing limit \\
-$S$ & Responsiveness or adaptive surface & The system's ability to reconfigure, buffer, route, repair, learn, or preserve function under changing load \\
-$M_s$ & Structural memory & Stored damage, hysteresis, inherited topology, institutional memory, trained weights, ecological legacy, or retained state \\
-$\Psi_s$ & Adaptive operating ratio $(\Phi/C)\cdot S\cdot M_s$ & Local bookkeeping gauge for constrained operation, overload, recovery, or regime change; not a universal constant \\
-$\Lambda$ & Life Number or capstone surplus ratio where explicitly defined & Reserved for Part II-derived life-number notation or synthesis-level surplus measures, never an undefined decoration \\
-\hline
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\hline
-Symbol & Local role & Interpretation rule \\
-\hline
-$\alpha$ & Accumulation or reinforcement coefficient & Sets how fast a pathway, constraint, habit, cascade, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, clearance, or washout coefficient & Sets loss, recovery, damping, forgetting, degradation, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, redistribution, or transfer coefficient & Sets spread across nodes, layers, tissues, markets, infrastructures, media, or physical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, small offset, or numerical guard & Used only as local thresholds, stability margins, measurement tolerances, or stress increments \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, intensity, or frequency terms & Meaning is fixed by the equation, subscript, and domain-specific proxy in the paragraph where the term appears \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, variability/noise, time-scale, phase, or field terms & Local coefficients only; subscripts bind them to the named pathway, domain, or experiment \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where defined & $\Omega$ names a modeled state space; $\Lambda$ carries life-number or synthesis notation only when the paper defines it \\
-\hline
-\end{tabular}
-}
-\end{center}
 
 \section{Series Context}
 
@@ -144,7 +106,7 @@ the mapping adds no release-level claim.
 \section{Current Runtime Diagnostic}
 
 The Part E diagnostic run includes a climate/atmosphere adapter row and the
-universal cascade stress test. These files check finite runtime behavior and
+network-cascade stress test. These files check finite runtime behavior and
 regime reporting in the current CDFD Runtime \cite{CDFDRuntime2026}. They are a
 model audit for later measurement, not a replacement for atmospheric data.
 
@@ -155,8 +117,8 @@ track stagnation, amplification, or recovery; if the same event is explained
 more cleanly by established atmospheric diagnostics; or if the CDFD/AFL terms
 cannot be separated from ordinary variable names in a reproducible analysis.
 
-% BEGIN PART IV MAJOR UNIVERSAL UPGRADE
-\section{Major Universal Upgrade: Mechanism, Scale, and Tests}
+% BEGIN PART IV MAJOR CROSS-DOMAIN UPGRADE
+\section{Cross-Domain Model Upgrade: Mechanism, Scale, and Tests}
 
 \subsection{Observable Translation}
 
@@ -212,23 +174,7 @@ $Y$ & circulation strength, precipitation, and extreme-event persistence & Which
 \label{fig:a02-architecture}
 \end{figure}
 
-\subsection{Minimal Coupled Model}
-
-A paper-level model must separate throughput, constraint accumulation, response,
-and history. One deliberately minimal form is
-\begin{align}
-Y(t) &= \frac{\Phi(t)S(t)}{\epsilon + C(t)}, \\
-\frac{dC}{dt} &= \alpha \Phi(t) - \beta S(t)C(t) + \gamma \mathcal{L}C(t), \\
-\frac{dM_s}{dt} &= \eta C(t) - \mu M_s(t), \\
-\Psi_s(t) &= \frac{\widehat{\Phi}(t)}{\epsilon+\widehat{C}(t)}\,
-             \widehat{S}(t)\,[1+\omega\widehat{M_s}(t)] .
-\end{align}
-Here $Y$ is the measured output, $\epsilon>0$ prevents a singular denominator,
-$\mathcal{L}$ is a spatial or network coupling operator, and hats denote
-explicitly normalized variables. The sign and magnitude of $\omega$ must be
-estimated: memory can preserve useful organization or amplify damage. No fixed
-threshold is universal before the variables, normalization, and observation
-scale are declared.
+\subsection{Paper-Specific Causal Hypothesis}
 
 For this paper, the hypothesized causal sequence is specific. A change in
 differential solar heating, latent heat, and moisture transport arrives faster than convection, waves, circulation, and cloud adjustment can compensate.
@@ -238,18 +184,9 @@ magnitude can produce a different trajectory in circulation strength, precipitat
 scientific task is to estimate that sequence against the best ordinary model of
 the domain, not merely to redescribe the outcome after it occurs.
 
-\subsection{Cross-Scale Universality Without Mechanistic Erasure}
+\subsection{Cross-Scale Translation Without Mechanistic Erasure}
 
-For the Earth systems family, the universal comparison is between coupled transport, finite environmental capacity, buffering, and retained landscape or ecosystem state. Universality here cannot erase conservation laws, geometry, or scale; it must expose where those domain equations create comparable overload and recovery structures. \cite{Holling1973,Turing1952,BakTangWiesenfeld1987}
-The CDFD programme is cumulative: Part I supplies the flow--constraint
-foundation \cite{MujjabiPartI2026}; Part II asks when maintained throughput
-supports persistent organized states \cite{MujjabiPartII2026}; Part III
-develops adaptive limitation and biological memory \cite{MujjabiPartIII2026};
-and Part IV \cite{MujjabiPartIV2026} tests how much of that architecture
-survives translation. The CDFD Runtime \cite{CDFDRuntime2026} supplies a
-reproducible numerical stress surface, but it does not substitute for the
-domain evidence named here.
-
+For the Earth systems family, the cross-domain translation compares coupled transport, finite environmental capacity, buffering, and retained landscape or ecosystem state. It cannot erase conservation laws, geometry, or scale; it must expose where those domain equations create comparable overload and recovery structures. \cite{Holling1973,Turing1952,BakTangWiesenfeld1987}
 The required scale declaration for this paper is minutes to decades; boundary layers to planetary circulation. At short
 scales, the key question is whether the incoming drive is transmitted,
 buffered, or diverted. At intermediate scales, response changes effective
@@ -278,14 +215,6 @@ Model comparison & Compare the baseline domain model with and without the CDFD/A
 \end{tabularx}
 \end{table}
 
-The strongest practical design combines a prospective perturbation with a
-recovery window. The load-ramp phase estimates where constraint begins to rise
-faster than output. The recovery phase estimates $\beta$ and $\mu$, separating
-fast relaxation from persistent memory. A topology or coupling intervention
-then asks whether rerouting changes the cascade as predicted. Null results are
-informative because they identify domains in which the universal notation adds
-no measurable value.
-
 \subsection{Research Programme and Boundary Conditions}
 
 The immediate research programme has four steps. First, construct a documented
@@ -294,17 +223,9 @@ Second, fit a baseline domain model and report its calibration and out-of-sample
 error. Third, add the smallest identifiable CDFD/AFL state extension and test
 whether it improves prediction of circulation strength, precipitation, and extreme-event persistence. Fourth, repeat the
 analysis across the declared scale range and publish negative cases as part of
-the universality audit.
+the cross-domain translation audit.
 
-Three boundaries are non-negotiable. Correlation between flow and failure does
-not identify a constraint mechanism. A fitted memory term does not prove that
-the stored state has the same material meaning in another domain. Finally, a
-runtime cascade is evidence about the implementation, not evidence that the
-real system follows it. The paper becomes stronger when it can say precisely
-where the translation stops.
-
-
-% END PART IV MAJOR UNIVERSAL UPGRADE
+% END PART IV MAJOR CROSS-DOMAIN UPGRADE
 
 \section{Conclusion}
 

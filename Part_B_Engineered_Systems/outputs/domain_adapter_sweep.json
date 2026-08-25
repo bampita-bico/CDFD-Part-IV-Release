@@ -4,6 +4,7 @@
     "non_finite_paths": []
   },
   "parameters": {
+    "active_manifest": "Part_E_Synthesis/supplementary/active_paper_manifest.json",
     "nx": 8,
     "ny": 8,
     "steps": 8
@@ -15,10 +16,11 @@
     "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
     "python": "3.14.4",
     "runtime": "CDFD Runtime",
-    "timestamp_utc": "2026-06-04T18:45:05+00:00"
+    "timestamp_utc": "2026-08-18T20:23:27+00:00"
   },
   "rows": [
     {
+      "active_papers": "B-02",
       "domain": "energy_systems",
       "errors": "",
       "final_mean_C": 0.024900199733599797,
@@ -31,37 +33,40 @@
       "status": "ok"
     },
     {
+      "active_papers": "B-03",
       "domain": "networks",
       "errors": "",
       "final_mean_C": 0.020418163781551826,
       "final_mean_phi": 0.7495,
       "final_mean_psi": 41.85599737054252,
       "initial_mean_psi": 36.5609756097561,
-      "label": "network routing",
+      "label": "information flow and digital infrastructure",
       "part": "Part B",
       "regime": "overload",
       "status": "ok"
     },
     {
+      "active_papers": "B-04",
       "domain": "cloud_computing",
       "errors": "",
       "final_mean_C": 0.10009880292907114,
       "final_mean_phi": 0.7596,
       "final_mean_psi": 7.770124545974156,
       "initial_mean_psi": 7.558208955223882,
-      "label": "cloud capacity",
+      "label": "distributed and cloud computing",
       "part": "Part B",
       "regime": "overload",
       "status": "ok"
     },
     {
+      "active_papers": "B-05",
       "domain": "artificial_intelligence",
       "errors": "",
       "final_mean_C": 0.14940119840159874,
       "final_mean_phi": 0.68,
       "final_mean_psi": 4.601517502948771,
       "initial_mean_psi": 4.533333333333332,
-      "label": "artificial intelligence",
+      "label": "neural and AI computation",
       "part": "Part B",
       "regime": "overload",
       "status": "ok"

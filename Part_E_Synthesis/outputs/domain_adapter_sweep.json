@@ -1,9 +1,31 @@
 {
+  "active_revision": "1.1.0",
   "finite_audit": {
     "all_finite": true,
     "non_finite_paths": []
   },
+  "papers_without_runtime_adapter": [
+    "A-01",
+    "A-05",
+    "A-09",
+    "A-10",
+    "A-11",
+    "B-01",
+    "B-06",
+    "B-07",
+    "B-09",
+    "B-10",
+    "C-02",
+    "C-08",
+    "C-09",
+    "D-04",
+    "D-05",
+    "E-01",
+    "F-03",
+    "G-03"
+  ],
   "parameters": {
+    "active_manifest": "Part_E_Synthesis/supplementary/active_paper_manifest.json",
     "nx": 8,
     "ny": 8,
     "steps": 8
@@ -14,10 +36,11 @@
     "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
     "python": "3.14.4",
     "runtime": "CDFD Runtime",
-    "timestamp_utc": "2026-06-04T18:45:05+00:00"
+    "timestamp_utc": "2026-08-18T20:23:27+00:00"
   },
   "rows": [
     {
+      "active_papers": "A-02",
       "domain": "climate",
       "errors": "",
       "final_mean_C": 0.48555389480519584,
@@ -30,6 +53,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "A-03",
       "domain": "oceanography",
       "errors": "",
       "final_mean_C": 0.14940119840159874,
@@ -42,6 +66,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "A-04",
       "domain": "hydrology",
       "errors": "",
       "final_mean_C": 0.19920159786879837,
@@ -54,6 +79,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "A-07",
       "domain": "biodiversity",
       "errors": "",
       "final_mean_C": 0.14940119840159874,
@@ -66,6 +92,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "A-08",
       "domain": "pollution",
       "errors": "",
       "final_mean_C": 0.24900199733599784,
@@ -78,6 +105,33 @@
       "status": "ok"
     },
     {
+      "active_papers": "A-06",
+      "domain": "ecology",
+      "errors": "",
+      "final_mean_C": 0.05976047936063949,
+      "final_mean_phi": 0.75,
+      "final_mean_psi": 13.099731919706588,
+      "initial_mean_psi": 12.5,
+      "label": "ecological and trophic flow",
+      "part": "Part A",
+      "regime": "overload",
+      "status": "ok"
+    },
+    {
+      "active_papers": "A-13",
+      "domain": "geology",
+      "errors": "",
+      "final_mean_C": 0.6972055925407941,
+      "final_mean_phi": 0.2,
+      "final_mean_psi": 0.2842331821481348,
+      "initial_mean_psi": 0.28571428571428575,
+      "label": "tectonics, seismicity, and volcanism",
+      "part": "Part A",
+      "regime": "constrained",
+      "status": "ok"
+    },
+    {
+      "active_papers": "B-02",
       "domain": "energy_systems",
       "errors": "",
       "final_mean_C": 0.024900199733599797,
@@ -90,42 +144,46 @@
       "status": "ok"
     },
     {
+      "active_papers": "B-03",
       "domain": "networks",
       "errors": "",
       "final_mean_C": 0.020418163781551826,
       "final_mean_phi": 0.7495,
       "final_mean_psi": 41.85599737054252,
       "initial_mean_psi": 36.5609756097561,
-      "label": "network routing",
+      "label": "information flow and digital infrastructure",
       "part": "Part B",
       "regime": "overload",
       "status": "ok"
     },
     {
+      "active_papers": "B-04",
       "domain": "cloud_computing",
       "errors": "",
       "final_mean_C": 0.10009880292907114,
       "final_mean_phi": 0.7596,
       "final_mean_psi": 7.770124545974156,
       "initial_mean_psi": 7.558208955223882,
-      "label": "cloud capacity",
+      "label": "distributed and cloud computing",
       "part": "Part B",
       "regime": "overload",
       "status": "ok"
     },
     {
+      "active_papers": "B-05",
       "domain": "artificial_intelligence",
       "errors": "",
       "final_mean_C": 0.14940119840159874,
       "final_mean_phi": 0.68,
       "final_mean_psi": 4.601517502948771,
       "initial_mean_psi": 4.533333333333332,
-      "label": "artificial intelligence",
+      "label": "neural and AI computation",
       "part": "Part B",
       "regime": "overload",
       "status": "ok"
     },
     {
+      "active_papers": "C-01",
       "domain": "economics",
       "errors": "",
       "final_mean_C": 0.9960079893439914,
@@ -138,6 +196,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "C-03",
       "domain": "trade_routes",
       "errors": "",
       "final_mean_C": 0.19920159786879837,
@@ -150,6 +209,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "C-04",
       "domain": "migration",
       "errors": "",
       "final_mean_C": 0.4482035952047962,
@@ -162,6 +222,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "C-06",
       "domain": "education",
       "errors": "",
       "final_mean_C": 0.2988023968031974,
@@ -174,6 +235,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "C-07",
       "domain": "politics",
       "errors": "",
       "final_mean_C": 0.39840319573759675,
@@ -186,6 +248,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "D-01",
       "domain": "consciousness",
       "errors": "",
       "final_mean_C": 0.009960079893439914,
@@ -198,6 +261,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "D-02",
       "domain": "epidemiology",
       "errors": "",
       "final_mean_C": 0.6573652729670343,
@@ -210,18 +274,7 @@
       "status": "ok"
     },
     {
-      "domain": "geology",
-      "errors": "",
-      "final_mean_C": 0.6972055925407941,
-      "final_mean_phi": 0.2,
-      "final_mean_psi": 0.2842331821481348,
-      "initial_mean_psi": 0.28571428571428575,
-      "label": "geology",
-      "part": "Part D",
-      "regime": "constrained",
-      "status": "ok"
-    },
-    {
+      "active_papers": "D-06",
       "domain": "quantum_mechanics",
       "errors": "",
       "final_mean_C": 0.2589620772294378,
@@ -234,30 +287,7 @@
       "status": "ok"
     },
     {
-      "domain": "ecology",
-      "errors": "",
-      "final_mean_C": 0.05976047936063949,
-      "final_mean_phi": 0.75,
-      "final_mean_psi": 13.099731919706588,
-      "initial_mean_psi": 12.5,
-      "label": "ecology",
-      "part": "Part D",
-      "regime": "overload",
-      "status": "ok"
-    },
-    {
-      "domain": "information_theory",
-      "errors": "",
-      "final_mean_C": 0.17430139813519852,
-      "final_mean_phi": 0.6499999999999999,
-      "final_mean_psi": 3.756665017841029,
-      "initial_mean_psi": 3.7142857142857144,
-      "label": "information flow",
-      "part": "Part D",
-      "regime": "overload",
-      "status": "ok"
-    },
-    {
+      "active_papers": "D-12",
       "domain": "immunology",
       "errors": "",
       "final_mean_C": 0.24900199733599784,
@@ -270,6 +300,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "D-13",
       "domain": "genetics",
       "errors": "",
       "final_mean_C": 0.09960079893439919,
@@ -282,18 +313,20 @@
       "status": "ok"
     },
     {
+      "active_papers": "F-01; F-02",
       "domain": "astrophysics",
       "errors": "",
       "final_mean_C": 0.1958815712376516,
       "final_mean_phi": 0.205,
       "final_mean_psi": 1.0392904931118707,
       "initial_mean_psi": 1.0423728813559323,
-      "label": "astrophysics",
+      "label": "stellar and galactic dynamics",
       "part": "Part F",
       "regime": "stable",
       "status": "ok"
     },
     {
+      "active_papers": "F-04",
       "domain": "nuclear_physics",
       "errors": "",
       "final_mean_C": 0.2988023968031974,
@@ -306,6 +339,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "F-05",
       "domain": "plasma_physics",
       "errors": "",
       "final_mean_C": 0.34860279627039703,
@@ -318,6 +352,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "G-01",
       "domain": "linguistics",
       "errors": "",
       "final_mean_C": 0.2191217576556781,
@@ -330,6 +365,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "G-02",
       "domain": "epistemology",
       "errors": "",
       "final_mean_C": 0.2241017976023981,

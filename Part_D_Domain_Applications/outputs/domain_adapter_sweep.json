@@ -4,6 +4,7 @@
     "non_finite_paths": []
   },
   "parameters": {
+    "active_manifest": "Part_E_Synthesis/supplementary/active_paper_manifest.json",
     "nx": 8,
     "ny": 8,
     "steps": 8
@@ -15,10 +16,11 @@
     "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
     "python": "3.14.4",
     "runtime": "CDFD Runtime",
-    "timestamp_utc": "2026-06-04T18:45:05+00:00"
+    "timestamp_utc": "2026-08-18T20:23:27+00:00"
   },
   "rows": [
     {
+      "active_papers": "D-01",
       "domain": "consciousness",
       "errors": "",
       "final_mean_C": 0.009960079893439914,
@@ -31,6 +33,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "D-02",
       "domain": "epidemiology",
       "errors": "",
       "final_mean_C": 0.6573652729670343,
@@ -43,18 +46,7 @@
       "status": "ok"
     },
     {
-      "domain": "geology",
-      "errors": "",
-      "final_mean_C": 0.6972055925407941,
-      "final_mean_phi": 0.2,
-      "final_mean_psi": 0.2842331821481348,
-      "initial_mean_psi": 0.28571428571428575,
-      "label": "geology",
-      "part": "Part D",
-      "regime": "constrained",
-      "status": "ok"
-    },
-    {
+      "active_papers": "D-06",
       "domain": "quantum_mechanics",
       "errors": "",
       "final_mean_C": 0.2589620772294378,
@@ -67,30 +59,7 @@
       "status": "ok"
     },
     {
-      "domain": "ecology",
-      "errors": "",
-      "final_mean_C": 0.05976047936063949,
-      "final_mean_phi": 0.75,
-      "final_mean_psi": 13.099731919706588,
-      "initial_mean_psi": 12.5,
-      "label": "ecology",
-      "part": "Part D",
-      "regime": "overload",
-      "status": "ok"
-    },
-    {
-      "domain": "information_theory",
-      "errors": "",
-      "final_mean_C": 0.17430139813519852,
-      "final_mean_phi": 0.6499999999999999,
-      "final_mean_psi": 3.756665017841029,
-      "initial_mean_psi": 3.7142857142857144,
-      "label": "information flow",
-      "part": "Part D",
-      "regime": "overload",
-      "status": "ok"
-    },
-    {
+      "active_papers": "D-12",
       "domain": "immunology",
       "errors": "",
       "final_mean_C": 0.24900199733599784,
@@ -103,6 +72,7 @@
       "status": "ok"
     },
     {
+      "active_papers": "D-13",
       "domain": "genetics",
       "errors": "",
       "final_mean_C": 0.09960079893439919,

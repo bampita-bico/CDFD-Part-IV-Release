@@ -16,73 +16,28 @@
 \small Founder, Vura Labs\\
 \small Kampala, Uganda\\
 \small ORCID: 0009-0001-0556-5516}
-\date{May 2026}
+\date{August 2026}
 
 \begin{document}
 \maketitle
+
+% BEGIN SHARED-METHODS POINTER
+\noindent\textit{Shared Part IV notation and evidence boundaries are defined in \path{PART_IV_METHODS_AND_CLAIM_BOUNDARY.md}. This paper states only its local observables, comparison, and failure conditions.}
+% END SHARED-METHODS POINTER
 
 
 \begin{abstract}
 This paper develops a falsifiable CDFD/AFL model of Unified Infrastructure. It maps demand across energy, water, transport, communication, and public services to driving flux $\Phi$, component capacity, coupling, dependency, and maintenance limits to active constraint $C$, redundancy, rerouting, control, repair, and demand management to responsiveness $S$, and aging, backlog, design choices, and prior incidents to structural memory $M_s$. The target outcome is service continuity, cascade size, restoration, and equity, tested against sensor streams, service logs, asset registers, dependency maps, and incident records. The paper treats universality as a shared model architecture rather than an assertion that unlike systems have the same material mechanism. It states the negative result that would make the mapping unnecessary and places the domain claim inside the cumulative CDFD programme and its reproducible runtime boundary.
 \end{abstract}
 
-\section*{Symbol Conventions}
-
-\noindent\textbf{CDFD/AFL Part IV symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\hline
-Symbol & Part IV meaning & Cross-domain reading \\
-\hline
-$\Phi$ & Driving flux or throughput & Energy, matter, signal, capital, information, traffic, force, or biological load entering a system \\
-$C$ & Active constraint or capacity burden & Bottleneck, resistance, boundary, scarcity, toxicity, regulation, topology, latency, or load-bearing limit \\
-$S$ & Responsiveness or adaptive surface & The system's ability to reconfigure, buffer, route, repair, learn, or preserve function under changing load \\
-$M_s$ & Structural memory & Stored damage, hysteresis, inherited topology, institutional memory, trained weights, ecological legacy, or retained state \\
-$\Psi_s$ & Adaptive operating ratio $(\Phi/C)\cdot S\cdot M_s$ & Local bookkeeping gauge for constrained operation, overload, recovery, or regime change; not a universal constant \\
-$\Lambda$ & Life Number or capstone surplus ratio where explicitly defined & Reserved for Part II-derived life-number notation or synthesis-level surplus measures, never an undefined decoration \\
-\hline
-\end{tabular}
-}
-\end{center}
-
-\noindent\textbf{Greek-symbol convention.}
-\begin{center}
-{\small
-\begin{tabular}{p{0.15\linewidth}p{0.34\linewidth}p{0.41\linewidth}}
-\hline
-Symbol & Local role & Interpretation rule \\
-\hline
-$\alpha$ & Accumulation or reinforcement coefficient & Sets how fast a pathway, constraint, habit, cascade, or retained structure grows under load \\
-$\beta$ & Relaxation, decay, clearance, or washout coefficient & Sets loss, recovery, damping, forgetting, degradation, or return toward baseline \\
-$\gamma$ & Coupling, diffusion, redistribution, or transfer coefficient & Sets spread across nodes, layers, tissues, markets, infrastructures, media, or physical phases \\
-$\delta,\epsilon$ & Perturbation, tolerance, small offset, or numerical guard & Used only as local thresholds, stability margins, measurement tolerances, or stress increments \\
-$\eta,\lambda,\mu,\nu$ & Efficiency, rate, baseline, intensity, or frequency terms & Meaning is fixed by the equation, subscript, and domain-specific proxy in the paragraph where the term appears \\
-$\rho,\sigma,\tau,\phi$ & Density/correlation, variability/noise, time-scale, phase, or field terms & Local coefficients only; subscripts bind them to the named pathway, domain, or experiment \\
-$\Omega,\Lambda$ & Domain/state space; Life Number where defined & $\Omega$ names a modeled state space; $\Lambda$ carries life-number or synthesis notation only when the paper defines it \\
-\hline
-\end{tabular}
-}
-\end{center}
-
-\section{Series Context}
-
-Part I sets the flow--constraint language used here \cite{MujjabiPartI2026}. Part II develops the Life Number and the origins-of-life use of the same notation \cite{MujjabiPartII2026}. Part III applies AFL to biology and medicine \cite{MujjabiPartIII2026}. Part IV \cite{MujjabiPartIV2026}, DOI \url{https://doi.org/10.5281/zenodo.20395901}, is the cross-domain stress test: it asks where the notation clarifies measurement, and where it becomes only a metaphor.
-
 \section{Introduction}
-
-\subsection{The Mujjabi Universal Capacity Law}
-Building directly upon the Fundamental Physics (Part I) \cite{MujjabiPartI2026}, the \textbf{Mujjabi Universal Capacity Law} proposes that across all scales---from black hole event horizons to global financial markets and power grids---driving high flux ($\Phi$) against a rigid topological constraint ($C$) can drive system saturation. When $\Phi/C$ approaches critical thresholds, the system does not scale linearly; it undergoes a topological phase transition.
-
-\subsection{The Mujjabi Universal Memory Law}
-The \textbf{Mujjabi Universal Memory Law} frames persistent systemic collapse. When a complex network fails to clear its structural memory ($M_s$) and its relaxation parameter decays ($\tau_{relax} \to \infty$), temporary stressors become permanent rigidities. This is the proposed CDFD mechanism behind ecological death, economic depressions, and infrastructural gridlock.
 
 A modern city is a stack of overlapping transport networks. A failure in the electrical grid instantly impacts the water pumping stations; a flooded highway halts the delivery of fuel to backup generators. These networks are not isolated; they are thermodynamically coupled.
 
 CDFD provides a common audit language for this coupling. Traffic, packet routing, and blood flow have different governing mechanisms, but each can be tested for measurable bottlenecks, network dependence, overload, and recovery.
 
 \section{The Meta-Infrastructural Adaptive Surface}
-We govern the unified infrastructure using the Universal Adaptive Ratio:
+We govern the unified infrastructure using the Adaptive Operating Ratio:
 \begin{equation}
     \Psi_s = \left( \frac{\Phi}{C} \right) \cdot S \cdot M_s
 \end{equation}
@@ -106,14 +61,8 @@ The failure cascades across domains because the infrastructural memory ($M_s$) w
 
 \section{Measurement Layer}
 
-The first job in any domain is to choose proxies before drawing conclusions. $\Phi$ may be a rate of material, energy, information, capital, or signal flow. $C$ is the bottleneck that slows or redirects that flow. $S$ measures the system's ability to reconfigure under stress, and $M_s$ records the past load that still changes present behavior. A useful application gives those four terms observable definitions, a time scale, and a failure condition. If a standard domain model explains the same data more cleanly, the CDFD/AFL mapping should give way.
-
-\subsection{Current Runtime Diagnostic: Universal Network Cascade}
-The release-local discovery script keeps this paper tied to the current CDFD Runtime \cite{CDFDRuntime2026}, including RK4 field updates, surface dynamics, structural-memory diffusion, and a finite-value audit. In the 2026-06-04 runtime pass, the localized hub-drive stress test ended with hub $\Psi_s=5.21$, peak network $\Psi_s=5.21$, 21 nodes above $\Psi_s>1.5$, and 37 maximum memory-locked nodes. I treat those numbers as a runtime sanity check and as a target for later domain measurement, not as a substitute for field data.
-
-
-% BEGIN PART IV MAJOR UNIVERSAL UPGRADE
-\section{Major Universal Upgrade: Mechanism, Scale, and Tests}
+% BEGIN PART IV MAJOR CROSS-DOMAIN UPGRADE
+\section{Cross-Domain Model Upgrade: Mechanism, Scale, and Tests}
 
 \subsection{Observable Translation}
 
@@ -169,23 +118,7 @@ $Y$ & service continuity, cascade size, restoration, and equity & Which outcome 
 \label{fig:b01-architecture}
 \end{figure}
 
-\subsection{Minimal Coupled Model}
-
-A paper-level model must separate throughput, constraint accumulation, response,
-and history. One deliberately minimal form is
-\begin{align}
-Y(t) &= \frac{\Phi(t)S(t)}{\epsilon + C(t)}, \\
-\frac{dC}{dt} &= \alpha \Phi(t) - \beta S(t)C(t) + \gamma \mathcal{L}C(t), \\
-\frac{dM_s}{dt} &= \eta C(t) - \mu M_s(t), \\
-\Psi_s(t) &= \frac{\widehat{\Phi}(t)}{\epsilon+\widehat{C}(t)}\,
-             \widehat{S}(t)\,[1+\omega\widehat{M_s}(t)] .
-\end{align}
-Here $Y$ is the measured output, $\epsilon>0$ prevents a singular denominator,
-$\mathcal{L}$ is a spatial or network coupling operator, and hats denote
-explicitly normalized variables. The sign and magnitude of $\omega$ must be
-estimated: memory can preserve useful organization or amplify damage. No fixed
-threshold is universal before the variables, normalization, and observation
-scale are declared.
+\subsection{Paper-Specific Causal Hypothesis}
 
 For this paper, the hypothesized causal sequence is specific. A change in
 demand across energy, water, transport, communication, and public services arrives faster than redundancy, rerouting, control, repair, and demand management can compensate.
@@ -195,18 +128,9 @@ magnitude can produce a different trajectory in service continuity, cascade size
 scientific task is to estimate that sequence against the best ordinary model of
 the domain, not merely to redescribe the outcome after it occurs.
 
-\subsection{Cross-Scale Universality Without Mechanistic Erasure}
+\subsection{Cross-Scale Translation Without Mechanistic Erasure}
 
-For the engineered systems family, the universal comparison is between demand, designed capacity, feedback control, dependency topology, and accumulated technical state. The strongest engineering use is prospective: the mapping must identify a bottleneck, a control action, or a recovery signature before the failure occurs. \cite{BarabasiAlbert1999,WattsStrogatz1998,Shannon1948,BakTangWiesenfeld1987}
-The CDFD programme is cumulative: Part I supplies the flow--constraint
-foundation \cite{MujjabiPartI2026}; Part II asks when maintained throughput
-supports persistent organized states \cite{MujjabiPartII2026}; Part III
-develops adaptive limitation and biological memory \cite{MujjabiPartIII2026};
-and Part IV \cite{MujjabiPartIV2026} tests how much of that architecture
-survives translation. The CDFD Runtime \cite{CDFDRuntime2026} supplies a
-reproducible numerical stress surface, but it does not substitute for the
-domain evidence named here.
-
+For the engineered systems family, the cross-domain translation compares demand, designed capacity, feedback control, dependency topology, and accumulated technical state. The strongest engineering use is prospective: the mapping must identify a bottleneck, a control action, or a recovery signature before the failure occurs. \cite{BarabasiAlbert1999,WattsStrogatz1998,Shannon1948,BakTangWiesenfeld1987}
 The required scale declaration for this paper is milliseconds to decades; components to national infrastructure. At short
 scales, the key question is whether the incoming drive is transmitted,
 buffered, or diverted. At intermediate scales, response changes effective
@@ -235,14 +159,6 @@ Model comparison & Compare the baseline domain model with and without the CDFD/A
 \end{tabularx}
 \end{table}
 
-The strongest practical design combines a prospective perturbation with a
-recovery window. The load-ramp phase estimates where constraint begins to rise
-faster than output. The recovery phase estimates $\beta$ and $\mu$, separating
-fast relaxation from persistent memory. A topology or coupling intervention
-then asks whether rerouting changes the cascade as predicted. Null results are
-informative because they identify domains in which the universal notation adds
-no measurable value.
-
 \subsection{Research Programme and Boundary Conditions}
 
 The immediate research programme has four steps. First, construct a documented
@@ -251,17 +167,9 @@ Second, fit a baseline domain model and report its calibration and out-of-sample
 error. Third, add the smallest identifiable CDFD/AFL state extension and test
 whether it improves prediction of service continuity, cascade size, restoration, and equity. Fourth, repeat the
 analysis across the declared scale range and publish negative cases as part of
-the universality audit.
+the cross-domain translation audit.
 
-Three boundaries are non-negotiable. Correlation between flow and failure does
-not identify a constraint mechanism. A fitted memory term does not prove that
-the stored state has the same material meaning in another domain. Finally, a
-runtime cascade is evidence about the implementation, not evidence that the
-real system follows it. The paper becomes stronger when it can say precisely
-where the translation stops.
-
-
-% END PART IV MAJOR UNIVERSAL UPGRADE
+% END PART IV MAJOR CROSS-DOMAIN UPGRADE
 
 \section{Conclusion}
 Engineered infrastructure is a macroscopic organism. Treating power, water, and transit as separate entities defies the basic laws of thermodynamics. By utilizing CDFD, urban planners can design globally coupled, highly elastic infrastructures that natively resist cross-domain cascading failures, ensuring the continuous survival of the metropolitan active surface.

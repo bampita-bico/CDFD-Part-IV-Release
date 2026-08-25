@@ -214,7 +214,7 @@
       "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
       "python": "3.14.4",
       "runtime": "CDFD Runtime",
-      "timestamp_utc": "2026-06-04T18:45:01+00:00"
+      "timestamp_utc": "2026-08-18T20:23:24+00:00"
     },
     "status": "ok",
     "warnings": []
@@ -260,6 +260,7 @@
         "report",
         "explain",
         "llm",
+        "cdfl",
         "validate",
         "run",
         "export",
@@ -275,21 +276,25 @@
       ],
       "domain_count": 196,
       "entrypoints": {
+        "cdfl_tooling": "python cdfd.py cdfl lint examples/heat_flow.cdfl",
         "cli": "python cdfd.py",
         "diagnostics_export": "python cdfd.py diagnostics --out experiments/outputs/part_ii_runtime_diagnostics.json",
         "legacy_domain_cli": "python -m domains",
+        "vscode_extension_optional": "tools/cdfl-vscode",
         "webapp_optional": "python -m webapp.run_server"
       },
       "language": "CDFL",
       "name": "CDFD Runtime",
       "optional_surfaces": [
-        "webapp"
+        "webapp",
+        "vscode_extension"
       ],
       "platform_order": [
         "engine",
         "cli",
         "api",
-        "webapp"
+        "webapp",
+        "editor"
       ],
       "primary_surface": "cli"
     },
@@ -299,7 +304,7 @@
       "platform": "Linux-6.17.0-22-generic-x86_64-with-glibc2.39",
       "python": "3.14.4",
       "runtime": "CDFD Runtime",
-      "timestamp_utc": "2026-06-04T18:45:01+00:00"
+      "timestamp_utc": "2026-08-18T20:23:24+00:00"
     },
     "status": "ok",
     "warnings": []

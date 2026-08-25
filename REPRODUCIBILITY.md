@@ -32,6 +32,9 @@ The command writes Part-specific artifacts under each Part's `outputs/` folder
 and release-wide synthesis artifacts under `Part_E_Synthesis/outputs/` and
 `Part_E_Synthesis/figures/`.
 It does not write into the root workspace `experiments/outputs` directory.
+The manifest `Part_E_Synthesis/supplementary/active_paper_manifest.json` maps
+each runtime adapter row to its active 45-paper destination. It excludes the
+13 archived predecessors and makes merged associations explicit.
 
 Expected generated files:
 
@@ -45,31 +48,13 @@ Expected generated files:
 - `Part_E_Synthesis/figures/domain_sweep_psi.png`
 - `Part_A_Earth_Systems/outputs/domain_adapter_sweep.csv` through the matching Part B, C, D, F, and G output slices.
 
-## Refresh Manuscript Claim Language
+## Active Manuscript Maintenance
 
-After regenerating outputs, run the final manuscript cleanup:
-
-```bash
-/home/bampita/Projects/CDFD/.venv/bin/python Part_E_Synthesis/supplementary/finalize_partiv_manuscripts.py
-```
-
-This normalizes author/date lines, replaces stale proof language with
-candidate-result language, normalizes Part A-G paper titles, updates the
-universal runtime diagnostic paragraph, removes placeholder `nocite` blocks,
-and refreshes the compact real bibliography.
-
-## Apply the Major Manuscript Upgrade
-
-After final cleanup, apply the idempotent depth and visual upgrade:
-
-```bash
-/home/bampita/Projects/CDFD/.venv/bin/python Part_E_Synthesis/supplementary/major_upgrade_partiv_manuscripts.py
-```
-
-The script keeps existing specialized material, replaces generic abstracts,
-adds one paper-specific operational model and native TikZ diagram to every
-manuscript, adds an evidence ladder and falsifier, disciplines exact-identity
-overclaims, and preserves the verified DOI-bearing citation layer.
+The pre-consolidation `finalize_partiv_manuscripts.py` and
+`major_upgrade_partiv_manuscripts.py` are guarded compatibility stubs. Do not
+run them: they describe the former 58-paper source layout and would recreate
+material intentionally moved to the shared methods companion. Make scoped
+edits to active papers, then run the redundancy audit and PDF build.
 
 ## Build Interactive Panels
 
@@ -88,7 +73,8 @@ build helper:
 /home/bampita/Projects/CDFD/.venv/bin/python Part_E_Synthesis/supplementary/build_partiv_pdfs.py
 ```
 
-The helper runs `latexmk` into `/tmp/cdfd_partiv_build` unless
+The helper runs each manuscript in its own subdirectory under
+`/tmp/cdfd_partiv_build` unless
 `CDFD_PARTIV_BUILD_DIR` is set, then copies release PDFs into each Part folder's
 `PDFs/` accessory directory with section-prefixed names such as
 `A01_Earth_Unified_Environmental_Transport.pdf`.
